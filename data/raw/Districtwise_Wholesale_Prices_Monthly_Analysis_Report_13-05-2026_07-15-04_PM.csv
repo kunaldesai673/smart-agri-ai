@@ -1,0 +1,23 @@
+,,,"District-wise Wholesale Prices Monthly Analysis for Wheat in Karnataka - October, 2023",,
+District,"Prices October, 2023 (Rs./Quintal)","Prices September, 2023 (Rs./Quintal)","Prices October, 2022 (Rs./Quintal)",Change (Over Previous Month),Change (Over Previous Year)
+Bangalore,4137.0,4100.0,3672.65,0.9%,12.6%
+Belgaum,3224.0,3450.86,2419.6,-6.6%,33.2%
+Bellary,3462.23,2526.0,-,37.1%,-
+Bidar,2863.01,2814.32,2608.39,1.7%,9.8%
+Bijapur,3036.11,2800.0,2413.1,8.4%,25.8%
+Dharwad,2928.0,2401.0,2279.5,21.9%,28.4%
+Gadag,2988.37,2858.12,2343.41,4.6%,27.5%
+Hassan,-,2815.0,2805.0,-,-
+Kolar,2262.0,-,-,-,-
+Koppal,2150.0,-,2500.0,-,-14.0%
+Mysore,3372.73,3475.0,3515.59,-2.9%,-4.1%
+Raichur,-,-,2400.0,-,-
+Shimoga,3888.75,3779.35,3250.0,2.9%,19.6%
+Tumkur,-,-,2976.67,-,-
+Average,3119.29,3101.96,2765.33,-,-
+
+Note:
+Weighted Average Price = ∑(arrival quantity * modal price) / ∑arrival quantity
+Change (Over Previous Month) = [Price - Price(Over Previous Month)/Price(Over Previous Month)] * 100
+Change (Over Previous Year) = [Price - Price(Over Previous Year)/Price(Over Previous Year)] * 100
+

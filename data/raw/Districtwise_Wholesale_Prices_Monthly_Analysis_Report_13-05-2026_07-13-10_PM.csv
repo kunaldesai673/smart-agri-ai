@@ -1,0 +1,26 @@
+,,,"District-wise Wholesale Prices Monthly Analysis for Wheat in Karnataka - September, 2024",,
+District,"Prices September, 2024 (Rs./Quintal)","Prices August, 2024 (Rs./Quintal)","Prices September, 2023 (Rs./Quintal)",Change (Over Previous Month),Change (Over Previous Year)
+Bangalore,3619.12,3300.0,4100.0,9.7%,-11.7%
+Belgaum,3293.7,2900.0,3450.86,13.6%,-4.5%
+Bellary,-,-,2526.0,-,-
+Bidar,2707.5,2917.19,2814.32,-7.2%,-3.8%
+Bijapur,3584.33,3430.61,2800.0,4.5%,28.0%
+Chikmagalur,2600.0,2570.0,-,1.2%,-
+Chitradurga,3110.0,-,-,-,-
+Davangere,2250.0,2522.09,-,-10.8%,-
+Dharwad,3015.0,3553.75,2401.0,-15.2%,25.6%
+Gadag,2929.93,2600.77,2858.12,12.7%,2.5%
+Hassan,3683.67,3700.0,2815.0,-0.4%,30.9%
+Haveri,2960.0,-,-,-,-
+Kalburgi,2800.0,4500.0,-,-37.8%,-
+Kolar,3834.48,3300.0,-,16.2%,-
+Mysore,3623.44,3234.55,3475.0,12.0%,4.3%
+Shimoga,3985.71,3923.21,3779.35,1.6%,5.5%
+Tumkur,3767.86,3859.0,-,-2.4%,-
+Average,3235.3,3307.94,3101.96,-,-
+
+Note:
+Weighted Average Price = ∑(arrival quantity * modal price) / ∑arrival quantity
+Change (Over Previous Month) = [Price - Price(Over Previous Month)/Price(Over Previous Month)] * 100
+Change (Over Previous Year) = [Price - Price(Over Previous Year)/Price(Over Previous Year)] * 100
+

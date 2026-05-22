@@ -1,0 +1,86 @@
+{
+  "Apple_Black_Rot": {
+    "en": {
+      "name": "Apple Black Rot (Botryosphaeria obtusa)",
+      "symptoms": "Purple-rimmed 'frog-eye' leaf spots; fruit develops firm, leathery black rot with concentric rings.",
+      "cure": "Prune infected limbs 6-8 inches below cankers. Apply Captan or Thiophanate-methyl fungicides during the growing season.",
+      "prevention": "Remove all 'mummy' (shriveled) fruit from trees. Sanitize pruning tools with 70% alcohol between every cut."
+    },
+    "hi": { "name": "सेब का ब्लैक रॉट", "symptoms": "पत्तियों पर बैंगनी घेरे वाले धब्बे; फलों पर काले रंग की सख्त सड़न।", "cure": "संक्रमित शाखाओं को काटें। बढ़ते मौसम में 'कैप्टन' कवकनाशी का प्रयोग करें।", "prevention": "पेड़ से सूखे और सड़े हुए फलों को हटा दें। छंटाई के औजारों को साफ रखें।" },
+    "mr": { "name": "सफरचंद ब्लॅक रॉट", "symptoms": "पानांवर जांभळ्या कडांचे ठिपके; फळे काळी पडून कडक होतात आणि सडतात.", "cure": "बाधित फांद्या कापून टाका. बागेत 'कॅप्टन' किंवा गंधकयुक्त बुरशीनाशकाची फवारणी करा.", "prevention": "झाडावरची सुकलेली फळे काढून नष्ट करा. छाटणीची अवजारे जंतुनाशकाने स्वच्छ करा." },
+    "kn": { "name": "ಸೇಬು ಕಪ್ಪು ಕೊಳೆತ", "symptoms": "ಎಲೆಗಳ ಮೇಲೆ ನೇರಳೆ ಕಲೆಗಳು; ಹಣ್ಣುಗಳು ಕಪ್ಪು ಬಣ್ಣಕ್ಕೆ ತಿರುಗಿ ಕೊಳೆಯುತ್ತವೆ.", "cure": "ಪೀಡಿತ ಕೊಂಬೆಗಳನ್ನು ಕತ್ತರಿಸಿ. ಬೆಳೆಯುವ ಹಂತದಲ್ಲಿ ಕ್ಯಾಪ್ಟನ್ ಶಿಲೀಂಧ್ರನಾಶಕ ಬಳಸಿ.", "prevention": "ಕೊಳೆತ ಹಣ್ಣುಗಳನ್ನು ಮರದಿಂದ ತೆಗೆದುಹಾಕಿ. ಕತ್ತರಿಸುವ ಉಪಕರಣಗಳನ್ನು ಸ್ವಚ್ಛವಾಗಿಡಿ." }
+  },
+  "Apple_Scab": {
+    "en": {
+      "name": "Apple Scab (Venturia inaequalis)",
+      "symptoms": "Olive-green to brown velvety spots on leaves; fruit develops corky, brown scabs.",
+      "cure": "Use systemic fungicides like Myclobutanil or Fenarimol. Organic: Apply Neem oil or Sulfur early in the season.",
+      "prevention": "Rake and destroy all fallen leaves in autumn to prevent spores from over-wintering. Plant scab-resistant varieties."
+    },
+    "hi": { "name": "सेब का स्कैब", "symptoms": "पत्तियों पर जैतून-हरे मखमली धब्बे; फलों पर भूरे रंग की पपड़ी।", "cure": "माइक्लोबुटानिल (Myclobutanil) का छिड़काव करें। जैविक: नीम का तेल लगाएं।", "prevention": "पतझड़ में गिरी हुई पत्तियों को इकट्ठा करके नष्ट कर दें। प्रतिरोधी किस्में लगाएं।" },
+    "mr": { "name": "सफरचंद स्कॅब", "symptoms": "पानांवर हिरवट-तपकिरी मखमली ठिपके; फळांवर कडक तपकिरी खवल्यांसारखे डाग.", "cure": "मायक्लोबुटानिल बुरशीनाशकाचा वापर करा. सेंद्रिय: कडुलिंबाचे तेल किंवा गंधकाचा वापर करा.", "prevention": "बागेतील पडलेली पाने गोळा करून जाळून टाका. लागवडीसाठी रोगप्रतिकारक जाती निवडा." },
+    "kn": { "name": "ಸೇಬು ಸ್ಕ್ಯಾಬ್", "symptoms": "ಎಲೆಗಳ ಮೇಲೆ ಹಸಿರು-ಕಂದು ಬಣ್ಣದ ಕಲೆಗಳು; ಹಣ್ಣಿನ ಮೇಲೆ ಕಂದು ಬಣ್ಣದ ತೇಪೆಗಳು.", "cure": "ಮೈಕ್ಲೋಬುಟಾನಿಲ್ ಶಿಲೀಂಧ್ರನಾಶಕ ಬಳಸಿ. ಸಾವಯವ: ಬೇವಿನ ಎಣ್ಣೆ ಸಿಂಪಡಿಸಿ.", "prevention": "ಬಿದ್ದ ಎಲೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಿ ನಾಶಮಾಡಿ. ರೋಗನಿರೋಧಕ ತಳಿಗಳನ್ನು ಬೆಳೆಸಿ." }
+  },
+  "Apple_Healthy": {
+    "en": { "name": "Apple: Healthy", "symptoms": "Lush green leaves with no spotting, curling, or discoloration.", "cure": "No chemical treatment required.", "prevention": "Maintain consistent watering and annual fertilization. Monitor for early signs of Aphids or Mites." },
+    "hi": { "name": "स्वस्थ सेब", "symptoms": "बिना किसी धब्बे या मुड़ाव के चमकदार हरी पत्तियां।", "cure": "किसी उपचार की आवश्यकता नहीं।", "prevention": "नियमित सिंचाई और खाद का प्रबंधन करें। कीटों की समय-समय पर जांच करें।" },
+    "mr": { "name": "निरोगी सफरचंद", "symptoms": "स्वच्छ आणि टवटवीत हिरवी पाने. कोणताही डाग नाही.", "cure": "बुरशीनाशकाची गरज नाही.", "prevention": "वेळेवर खत आणि पाणी द्या. मावा किंवा कोळी यांसारख्या किडींवर लक्ष ठेवा." },
+    "kn": { "name": "ಆರೋಗ್ಯಕರ ಸೇಬು", "symptoms": "ಯಾವುದೇ ಕಲೆಗಳಿಲ್ಲದ ಹಸಿರು ಎಲೆಗಳು.", "cure": "ಯಾವುದೇ ಚಿಕಿತ್ಸೆ ಅಗತ್ಯವಿಲ್ಲ.", "prevention": "ಸರಿಯಾದ ನೀರು ಮತ್ತು ಗೊಬ್ಬರ ಒದಗಿಸಿ. ಕೀಟಗಳ ಬಗ್ಗೆ ನಿಗಾವಹಿಸಿ." }
+  },
+  "Potato_Early_Blight": {
+    "en": {
+      "name": "Potato Early Blight (Alternaria solani)",
+      "symptoms": "Dark brown spots with concentric 'target' rings on older lower leaves.",
+      "cure": "Apply Chlorothalonil or Mancozeb sprays. For organic crops, use Bacillus subtilis sprays.",
+      "prevention": "Practice 3-year crop rotation. Use drip irrigation to avoid wetting leaves. Space plants to ensure airflow."
+    },
+    "hi": { "name": "आलू का अगेती झुलसा", "symptoms": "पुरानी निचली पत्तियों पर भूरे रंग के चक्राकार धब्बे।", "cure": "मैनकोजेब (Mancozeb) का छिड़काव करें। जैविक: बेसिलस सबटिलिस का प्रयोग करें।", "prevention": "3 साल का फसल चक्र अपनाएं। ड्रिप सिंचाई का प्रयोग करें और मल्चिंग करें।" },
+    "mr": { "name": "बटाटा अर्ली ब्लाईट", "symptoms": "खालच्या जुन्या पानांवर गडद तपकिरी वर्तुळाकार रिंगांचे डाग.", "cure": "मॅन्कोझेब किंवा क्लोरोथॅलोनिलची फवारणी करा. जैविकसाठी 'बेसिलस सबटिलिस' वापरा.", "prevention": "पिकांची फेरपालट करा. झाडांच्या पानांवर पाणी पडणार नाही याची काळजी घ्या." },
+    "kn": { "name": "ಆಲೂಗಡ್ಡೆ ಮುಂಚಿನ ಬ್ಲೈಟ್", "symptoms": "ಹಳೆಯ ಎಲೆಗಳ ಮೇಲೆ ಗುರಿ ಹಾಲಿನಂತಹ ಕಂದು ಕಲೆಗಳು.", "cure": "ಮ್ಯಾಂಕೋಜೆಬ್ ಶಿಲೀಂಧ್ರನಾಶಕ ಸಿಂಪಡಿಸಿ. ಸಾವಯವ: ಬೆಸಿಲಸ್ ಸಬ್ಟಿಲಿಸ್ ಬಳಸಿ.", "prevention": "ಬೆಳೆ ಪರಿವರ್ತನೆ ಮಾಡಿ. ಹನಿ ನೀರಾವರಿ ಪದ್ಧತಿ ಅಳವಡಿಸಿ." }
+  },
+  "Potato_Late_Blight": {
+    "en": {
+      "name": "Potato Late Blight (Phytophthora infestans)",
+      "symptoms": "Rapidly expanding water-soaked dark spots. White mold on underside in high humidity.",
+      "cure": "Treat immediately with Metalaxyl or Curzate. Note: This disease can destroy a field in days.",
+      "prevention": "Plant only certified disease-free seed tubers. Eliminate 'volunteer' potato plants from last season."
+    },
+    "hi": { "name": "आलू का पछेती झुलसा", "symptoms": "पत्तियों पर तेजी से फैलते काले धब्बे। नमी में पत्ती के नीचे सफेद फफूंद।", "cure": "मेटलैक्सिल (Metalaxyl) का तुरंत छिड़काव करें। संक्रमित पौधों को नष्ट करें।", "prevention": "केवल प्रमाणित रोग-मुक्त बीजों का ही उपयोग करें। खेत की स्वच्छता बनाए रखें।" },
+    "mr": { "name": "बटाटा लेट ब्लाईट", "symptoms": "पानांवर वेगाने पसरणारे काळे डाग. दमट हवामानात पानांखाली पांढरी बुरशी.", "cure": "मेटॅलॅक्सिल किंवा कर्झेटची (Curzate) तातडीने फवारणी करा.", "prevention": "नेहमी प्रमाणित आणि निरोगी बियाणे वापरा. शेतात पाणी साचणार नाही याची काळजी घ्या." },
+    "kn": { "name": "ಆಲೂಗಡ್ಡೆ ತಡವಾದ ಬ್ಲೈಟ್", "symptoms": "ವೇಗವಾಗಿ ಹರಡುವ ಕಪ್ಪು ಕಲೆಗಳು ಮತ್ತು ಎಲೆಯ ಕೆಳಗೆ ಬಿಳಿ ಬೂಷ್ಟು.", "cure": "ಮೆಟಲಾಕ್ಸಿಲ್ ಶಿಲೀಂಧ್ರನಾಶಕವನ್ನು ತಕ್ಷಣ ಬಳಸಿ.", "prevention": "ರೋಗಮುಕ್ತ ಬಿತ್ತನೆ ಗೆಡ್ಡೆಗಳನ್ನು ಮಾತ್ರ ಬಳಸಿ." }
+  },
+  "Potato_Healthy": {
+    "en": { "name": "Potato: Healthy", "symptoms": "Deep green foliage with upright stems and no wilting.", "cure": "No action needed.", "prevention": "Ensure 'hilling' (mounding soil) is done regularly to protect developing tubers from sunlight." },
+    "hi": { "name": "स्वस्थ आलू", "symptoms": "बिना किसी धब्बे या झुलसा के स्वस्थ हरी पत्तियां।", "cure": "कोई कार्रवाई आवश्यक नहीं।", "prevention": "आलू के कंदों को धूप से बचाने के लिए समय-समय पर मिट्टी चढ़ाएं (Hilling)।" },
+    "mr": { "name": "निरोगी बटाटा", "symptoms": "टवटवीत हिरवी पाने आणि मजबूत खोड.", "cure": "उपचाराची गरज नाही.", "prevention": "बटाट्यांना मातीची भर (Hilling) वेळेवर द्या जेणेकरून बटाटे उघडे पडणार नाहीत." },
+    "kn": { "name": "ಆರೋಗ್ಯಕರ ಆಲೂಗಡ್ಡೆ", "symptoms": "ಯಾವುದೇ ರೋಗವಿಲ್ಲದ ಹಸಿರು ಎಲೆಗಳು.", "cure": "ಯಾವುದೇ ಅಗತ್ಯವಿಲ್ಲ.", "prevention": "ಗೆಡ್ಡೆಗಳನ್ನು ರಕ್ಷಿಸಲು ನಿಯಮಿತವಾಗಿ ಮಣ್ಣು ಏರಿಸುವ ಕೆಲಸ ಮಾಡಿ." }
+  },
+  "Tomato_Early_Blight": {
+    "en": {
+      "name": "Tomato Early Blight (Alternaria solani)",
+      "symptoms": "Concentric rings (target spots) on mature leaves. Often starts near the soil surface.",
+      "cure": "Apply Copper-based fungicides or Mancozeb. Prune lower leaves to reduce soil-to-leaf contact.",
+      "prevention": "Apply organic mulch (straw/plastic) to prevent soil splashing onto leaves. Avoid overhead watering."
+    },
+    "hi": { "name": "टमाटर का अगेती झुलसा", "symptoms": "पुरानी पत्तियों पर छल्लेदार धब्बे। अक्सर जमीन के पास की पत्तियों से शुरू होता है।", "cure": "कॉपर कवकनाशी या मैनकोजेब का प्रयोग करें। नीचे की पत्तियों की छँटाई करें।", "prevention": "मिट्टी के छींटों को रोकने के लिए मल्चिंग करें। ड्रिप सिंचाई का उपयोग करें।" },
+    "mr": { "name": "टोमॅटो अर्ली ब्लाईट", "symptoms": "जुन्या पानांवर वर्तुळाकार रिंगांचे डाग. जमिनीलगतच्या पानांवर आधी सुरुवात होते.", "cure": "कॉपरयुक्त बुरशीनाशक किंवा मॅन्कोझेब वापरा. खालची पाने छाटून टाका.", "prevention": "माती उडून पानांवर पडू नये म्हणून मल्चिंग करा. झाडांना आधार (Stake) द्या." },
+    "kn": { "name": "ಟೊಮೆಟೊ ಮುಂಚಿನ ಬ್ಲೈಟ್", "symptoms": "ಎಲೆಗಳ ಮೇಲೆ ರೌಂಡ್ ಉಂಗುರದಂತಹ ಕಲೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ.", "cure": "ತಾಮ್ರದ ಶಿಲೀಂಧ್ರನಾಶಕ ಬಳಸಿ. ಕೆಳಭಾಗದ ಎಲೆಗಳನ್ನು ಕತ್ತರಿಸಿ.", "prevention": "ಮಣ್ಣು ಸಿಡಿಯದಂತೆ ಮಲ್ಚಿಂಗ್ ಮಾಡಿ. ಹನಿ ನೀರಾವರಿ ಬಳಸಿ." }
+  },
+  "Tomato_Late_Blight": {
+    "en": {
+      "name": "Tomato Late Blight (Phytophthora infestans)",
+      "symptoms": "Large, blue-gray patches on leaves that quickly turn brown. Fruit develops oily, bronze spots.",
+      "cure": "Use fungicides containing Propamocarb or Famoxadone. Destroy severely infected plants immediately.",
+      "prevention": "Ensure good air circulation (cage/stake plants). Avoid planting tomatoes in the same family as potatoes nearby."
+    },
+    "hi": { "name": "टमाटर का पछेती झुलसा", "symptoms": "पत्तियों पर बड़े नीले-भूरे धब्बे। फलों पर तांबे जैसे भूरे दाग।", "cure": "प्रोपेमोकार्ब (Propamocarb) का छिड़काव करें। गंभीर रूप से बीमार पौधों को उखाड़कर नष्ट करें।", "prevention": "पौधों के बीच पर्याप्त दूरी रखें और उन्हें सहारा (Cages) दें।" },
+    "mr": { "name": "टोमॅटो लेट ब्लाईट", "symptoms": "पानांवर मोठे निळसर-राखाडी डाग. फळांवर तांबूस रंगाचे तेलकट ठिपके पडतात.", "cure": "प्रोपेमोकार्बयुक्त बुरशीनाशक वापरा. जास्त प्रादुर्भाव असलेली झाडे जाळून टाका.", "prevention": "झाडांना आधार द्या आणि हवा खेळती राहील याची काळजी घ्या. बटाटा शेताजवळ लागवड टाळा." },
+    "kn": { "name": "ಟೊಮೆಟೊ ತಡವಾದ ಬ್ಲೈಟ್", "symptoms": "ಎಲೆಗಳ ಮೇಲೆ ದೊಡ್ಡ ಬೂದು ಬಣ್ಣದ ಕಲೆಗಳು. ಹಣ್ಣಿನ ಮೇಲೆ ಕಂಚಿನ ಬಣ್ಣದ ಕಲೆಗಳು.", "cure": "ಪ್ರೊಪಮೊಕಾರ್ಬ್ ಶಿಲೀಂಧ್ರನಾಶಕ ಬಳಸಿ. ಪೀಡಿತ ಗಿಡಗಳನ್ನು ನಾಶಮಾಡಿ.", "prevention": "ಗಿಡಗಳ ಮಧ್ಯೆ ಸರಿಯಾದ ಅಂತರವಿರಲಿ. ಗಿಡಗಳಿಗೆ ಆಧಾರ ನೀಡಿ." }
+  },
+  "Tomato_Healthy": {
+    "en": { "name": "Tomato: Healthy", "symptoms": "Firm, green leaves with strong vine growth and no visible pests.", "cure": "None required.", "prevention": "Prune lower leaves to stop soil splash. Apply consistent water to prevent fruit cracking and blossom end rot." },
+    "hi": { "name": "स्वस्थ टमाटर", "symptoms": "मजबूत तने और बिना किसी बीमारी वाली हरी पत्तियां।", "cure": "कोई उपचार नहीं।", "prevention": "मिट्टी के छींटों को रोकने के लिए नीचे की पत्तियों को काटें। पानी का स्तर समान रखें।" },
+    "mr": { "name": "निरोगी टोमॅटो", "symptoms": "टवटवीत हिरवी पाने आणि जोमदार वाढ.", "cure": "गरज नाही.", "prevention": "खालची पाने छाटा जेणेकरून मातीतील बुरशी पानांपर्यंत पोहोचणार नाही. नियमित पाणी द्या." },
+    "kn": { "name": "ಆರೋಗ್ಯಕರ ಟೊಮೆಟೊ", "symptoms": "ಯಾವುದೇ ರೋಗವಿಲ್ಲದ ಗಟ್ಟಿಮುಟ್ಟಾದ ಹಸಿರು ಎಲೆಗಳು.", "cure": "ಯಾವುದೇ ಅಗತ್ಯವಿಲ್ಲ.", "prevention": "ಕೆಳಭಾಗದ ಎಲೆಗಳನ್ನು ಕತ್ತರಿಸಿ. ನಿಯಮಿತವಾಗಿ ನೀರು ಒದಗಿಸಿ." }
+  }
+}

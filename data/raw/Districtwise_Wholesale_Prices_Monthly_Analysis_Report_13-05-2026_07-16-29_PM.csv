@@ -1,0 +1,25 @@
+,,,"District-wise Wholesale Prices Monthly Analysis for Wheat in Karnataka - April, 2023",,
+District,"Prices April, 2023 (Rs./Quintal)","Prices March, 2023 (Rs./Quintal)","Prices April, 2022 (Rs./Quintal)",Change (Over Previous Month),Change (Over Previous Year)
+Bagalkot,-,1211.0,2607.0,-,-
+Bangalore,3282.27,3551.28,2792.17,-7.6%,17.6%
+Belgaum,2700.0,3200.0,2400.0,-15.6%,12.5%
+Bellary,-,6965.0,-,-,-
+Bidar,2476.81,2394.65,2635.69,3.4%,-6.0%
+Bijapur,3082.81,2557.09,2985.71,20.6%,3.2%
+Chikmagalur,2667.0,-,-,-,-
+Dharwad,3323.76,2874.0,2105.81,15.7%,57.8%
+Gadag,2784.57,2603.99,2372.67,6.9%,17.4%
+Hassan,2500.0,2903.0,2102.9,-13.9%,18.9%
+Koppal,-,3300.0,2000.0,-,-
+Mangalore(Dakshin Kannad),-,-,2436.2,-,-
+Mysore,3398.86,3546.25,3427.61,-4.2%,-0.8%
+Raichur,-,2032.17,2086.96,-,-
+Shimoga,4195.14,3593.42,3556.07,16.8%,18.0%
+Tumkur,3150.0,-,-,-,-
+Average,3051.02,3133.22,2577.6,-,-
+
+Note:
+Weighted Average Price = ∑(arrival quantity * modal price) / ∑arrival quantity
+Change (Over Previous Month) = [Price - Price(Over Previous Month)/Price(Over Previous Month)] * 100
+Change (Over Previous Year) = [Price - Price(Over Previous Year)/Price(Over Previous Year)] * 100
+

@@ -1,0 +1,24 @@
+,,,"District-wise Wholesale Prices Monthly Analysis for Wheat in Karnataka - March, 2025",,
+District,"Prices March, 2025 (Rs./Quintal)","Prices February, 2025 (Rs./Quintal)","Prices March, 2024 (Rs./Quintal)",Change (Over Previous Month),Change (Over Previous Year)
+Bangalore,-,4033.32,4078.4,-,-
+Belgaum,3443.26,3600.0,-,-4.3%,-
+Bidar,2640.0,3118.39,3064.99,-15.3%,-13.9%
+Bijapur,-,3320.69,3116.98,-,-
+Chikmagalur,-,2728.57,2300.0,-,-
+Davangere,2400.0,2220.0,-,8.1%,-
+Dharwad,-,2894.62,3234.6,-,-
+Gadag,3192.0,3501.69,3563.66,-8.8%,-10.4%
+Hassan,3350.0,3850.0,2700.0,-13.0%,24.1%
+Haveri,3360.0,-,2300.0,-,46.1%
+Koppal,-,-,2417.18,-,-
+Mangalore(Dakshin Kannad),-,-,3800.0,-,-
+Mysore,3866.67,3989.5,3481.44,-3.1%,11.1%
+Shimoga,3882.69,3950.0,3926.92,-1.7%,-1.1%
+Tumkur,-,-,2400.0,-,-
+Average,3266.83,3382.43,3106.47,-,-
+
+Note:
+Weighted Average Price = ∑(arrival quantity * modal price) / ∑arrival quantity
+Change (Over Previous Month) = [Price - Price(Over Previous Month)/Price(Over Previous Month)] * 100
+Change (Over Previous Year) = [Price - Price(Over Previous Year)/Price(Over Previous Year)] * 100
+

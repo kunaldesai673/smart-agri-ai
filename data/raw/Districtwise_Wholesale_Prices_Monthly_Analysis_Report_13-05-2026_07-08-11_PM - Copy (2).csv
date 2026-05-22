@@ -1,0 +1,30 @@
+,,,"District-wise Wholesale Prices Monthly Analysis for Wheat in Karnataka - March, 2026",,
+District,"Prices March, 2026 (Rs./Quintal)","Prices February, 2026 (Rs./Quintal)","Prices March, 2025 (Rs./Quintal)",Change (Over Previous Month),Change (Over Previous Year)
+Bagalkot,3987.82,-,-,-,-
+Bangalore,4100.0,-,-,-,-
+Belgaum,4001.27,3694.35,3443.26,8.3%,16.2%
+Bellary,3385.27,3489.44,-,-3.0%,-
+Bidar,3364.93,-,2640.0,-,27.5%
+Bijapur,2461.05,2871.96,-,-14.3%,-
+Chikmagalur,2448.68,2775.19,-,-11.8%,-
+Chitradurga,2525.0,2531.68,-,-0.3%,-
+Davangere,2629.98,2819.1,2400.0,-6.7%,9.6%
+Dharwad,3064.35,2926.39,-,4.7%,-
+Gadag,2778.7,-,3192.0,-,-12.9%
+Hassan,3651.26,3522.86,3350.0,3.6%,9.0%
+Haveri,2655.16,2800.0,3360.0,-5.2%,-21.0%
+Karwar(Uttar Kannad),2300.0,-,-,-,-
+Kolar,2919.68,-,-,-,-
+Koppal,2406.0,-,-,-,-
+Mandya,2823.0,-,-,-,-
+Mangalore(Dakshin Kannad),3256.88,-,-,-,-
+Mysore,3438.98,3342.7,3866.67,2.9%,-11.1%
+Shimoga,2860.67,2917.63,3882.69,-1.9%,-26.3%
+Tumkur,5400.8,3627.92,-,48.9%,-
+Average,3164.74,3109.93,3266.83,-,-
+
+Note:
+Weighted Average Price = ∑(arrival quantity * modal price) / ∑arrival quantity
+Change (Over Previous Month) = [Price - Price(Over Previous Month)/Price(Over Previous Month)] * 100
+Change (Over Previous Year) = [Price - Price(Over Previous Year)/Price(Over Previous Year)] * 100
+
