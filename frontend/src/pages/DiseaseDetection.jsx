@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+// 🌐 CLOUD FIX: Automatically checks if you are running locally or on the live web
+const LEAF_API_BASE = window.location.hostname === "localhost"
+  ? "http://127.0.0.1:5001"
+  : "https://smart-agri-ai-backend.onrender.com";
+
 export default function DiseaseDetection() {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
@@ -36,7 +41,8 @@ export default function DiseaseDetection() {
     formData.append("image", image);
 
     try {
-      const res = await fetch("http://127.0.0.1:5001/predict", {
+      // 🔗 Uses the adaptive base path variable to hit your cloud endpoint
+      const res = await fetch(`${LEAF_API_BASE}/predict`, {
         method: "POST",
         body: formData,
       });
@@ -50,7 +56,7 @@ export default function DiseaseDetection() {
       }
     } catch (err) {
       console.error("Error:", err);
-      setResult({ error: "Server error or CORS issue" });
+      setResult({ error: "Cannot connect to server. Please check your internet or cloud service status." });
     }
 
     setLoading(false);
