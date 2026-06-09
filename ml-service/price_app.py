@@ -10,8 +10,9 @@ from sms_helper import send_agri_sms
 app = Flask(__name__)
 CORS(app)
 
-# Absolute path to your final processed multi-crop database matrix
-CSV_FINAL_DATA_PATH = r"C:\Users\kunal desai\smart-agri-ai\data\processed\belgaum_final_ai_data.csv"
+# 🌐 CLOUD & LOCAL COMPATIBLE PATHING: Dynamically locates the dataset folder anywhere
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CSV_FINAL_DATA_PATH = os.path.join(BASE_DIR, "data", "processed", "belgaum_final_ai_data.csv")
 
 # Global dictionary mapping to house our separate model states
 loaded_models = {}
