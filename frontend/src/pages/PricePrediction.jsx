@@ -4,7 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 // 🌐 CLOUD FIX: Automatically swaps between localhost (for debugging) and your live Render server!
 const PRICE_API_BASE = window.location.hostname === "localhost"
   ? "http://127.0.0.1:5002"
-  : "https://smart-agri-ai-7tc2.onrender.com";
+  : "https://smart-agri-ai-7tg9.onrender.com";
 
 export default function PricePrediction() {
   const [crop, setCrop] = useState("");
