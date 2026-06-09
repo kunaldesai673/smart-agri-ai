@@ -4,13 +4,14 @@ import os
 import pandas as pd
 import pickle
 import numpy as np
-# 📱 Step 1: Import the SMS delivery helper function
+# 📱 Import the SMS delivery helper function
 from sms_helper import send_agri_sms
 
 app = Flask(__name__)
-CORS(app)
+# 🌐 OPEN CORS POLICY: Completely clears authentication filters so Vercel can fetch your payloads securely
+CORS(app, resources={r"/*": {"origins": "*"}})
 
-# 🌐 CLOUD & LOCAL COMPATIBLE PATHING: Dynamically locates the dataset folder anywhere
+# 📂 DYNAMIC BASEPATH LAYER: Resolves project file tracking folders automatically on local Windows and cloud Linux boxes
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_FINAL_DATA_PATH = os.path.join(BASE_DIR, "data", "processed", "belgaum_final_ai_data.csv")
 
@@ -19,15 +20,27 @@ loaded_models = {}
 
 print("🔄 Loading Custom Crop Price Forecasting Engine Models...")
 try:
-    with open("wheat_model.pkl", "rb") as f:
+    # 🛠️ DIRECT REPO MAPPING: Prefixed paths with ml-service/ to target the cloud repository lane precisely
+    with open("ml-service/wheat_model.pkl", "rb") as f:
         loaded_models["wheat"] = pickle.load(f)
-    with open("maize_model.pkl", "rb") as f:
+    with open("ml-service/maize_model.pkl", "rb") as f:
         loaded_models["maize"] = pickle.load(f)
-    with open("soyabean_model.pkl", "rb") as f:  # 👈 Added Soyabean Model Loading
+    with open("ml-service/soyabean_model.pkl", "rb") as f:
         loaded_models["soyabean"] = pickle.load(f)
     print("✅ All Dedicated Crop Models Saved and Loaded Successfully.")
 except Exception as e:
-    print("❌ ERROR: Missing trained model binaries. Ensure wheat_model.pkl, maize_model.pkl, and soyabean_model.pkl exist.", e)
+    print("❌ ERROR: Missing trained model binaries. Attempting local subfolder fallback mappings...", e)
+    # 🔄 LOCAL MACHINE FALLBACK: Tries to pull files directly if script runs natively from within the ml-service folder
+    try:
+        with open("wheat_model.pkl", "rb") as f:
+            loaded_models["wheat"] = pickle.load(f)
+        with open("maize_model.pkl", "rb") as f:
+            loaded_models["maize"] = pickle.load(f)
+        with open("soyabean_model.pkl", "rb") as f:
+            loaded_models["soyabean"] = pickle.load(f)
+        print("✅ Local Fallback Core Loaded Successfully.")
+    except Exception as fallback_error:
+        print("🚨 CRITICAL ERROR: Both primary and fallback cloud binary lookups failed.", fallback_error)
 
 @app.route("/")
 def home():
@@ -38,8 +51,13 @@ def home():
 @app.route("/predict-price", methods=["GET"])
 def predict_price():
     try:
-        if not os.path.exists(CSV_FINAL_DATA_PATH):
-            return jsonify({"success": False, "error": "Processed CSV data file not found at path."}), 500
+        # Check fallback data path layout variations to avoid missing data anomalies
+        active_data_path = CSV_FINAL_DATA_PATH
+        if not os.path.exists(active_data_path):
+            # Check project root folder alternative mappings
+            active_data_path = os.path.join(BASE_DIR, "belgaum_final_ai_data.csv")
+            if not os.path.exists(active_data_path):
+                return jsonify({"success": False, "error": f"Processed CSV data file not found at paths: {CSV_FINAL_DATA_PATH}"}), 500
             
         target_crop = request.args.get('crop', 'Wheat').strip().capitalize()
         crop_key = target_crop.lower()
@@ -47,7 +65,7 @@ def predict_price():
         if crop_key not in loaded_models:
             return jsonify({"success": False, "error": f"Model profile for crop target '{target_crop}' not recognized."}), 400
             
-        df = pd.read_csv(CSV_FINAL_DATA_PATH)
+        df = pd.read_csv(active_data_path)
         df['Month_Year'] = df['Month_Year'].astype(str).str.replace('"', '').str.replace("'", '').str.strip()
         crop_filtered_df = df[df['Crop'] == target_crop].copy()
         
@@ -84,7 +102,6 @@ def predict_price():
         highest_month = seasonal_avg.loc[highest_idx]['Month_Name']
         lowest_month = seasonal_avg.loc[lowest_idx]['Month_Name']
 
-        # 💸 NOTE: SMS code has been completely removed from here to protect your trial balance!
         return jsonify({
             "success": True,
             "crop": target_crop,
@@ -112,34 +129,26 @@ def send_alert():
         data = request.get_json() or {}
         crop = data.get('crop', 'Wheat').strip().capitalize()
         predicted_price = data.get('predicted_price', 0.0)
-        
-        # Pull current price baseline from frontend payload map
         last_price = data.get('last_price', predicted_price)
         
-        # Calculate mathematical percentage gap shift direction
         if last_price > 0:
             pct_change = ((predicted_price - last_price) / last_price) * 100
         else:
             pct_change = 0.0
 
-        # Dynamic Action Threshold Logic Allocation Rules
         if pct_change > 3.0:
             trend_str = f"▲+{pct_change:.0f}%"
             action = "HOLD"
         elif pct_change < -3.0:
-            trend_str = f"▼{pct_change:.0f}%"  # Note: value is naturally negative
+            trend_str = f"▼{pct_change:.0f}%" 
             action = "SELL NOW"
         else:
             trend_str = "Stable"
             action = "SELL REGULAR"
         
-        # 🔒 Pull hidden phone coordinate securely from backend environment memory maps
         phone = data.get('phone', '+917483455833').strip()
-        
-        # 🎯 Final Exact Structural Layout Formatting (Keeps under 50 total characters)
         sms_alert_message = f"AgriAI-{crop}\nNext: Rs {predicted_price:.0f} >{trend_str}\nAction: {action}"
         
-        # Fire off the call to Twilio manually
         success = send_agri_sms(phone, sms_alert_message)
         
         if success:
@@ -151,6 +160,5 @@ def send_alert():
 
 
 if __name__ == "__main__":
-    import os
     port = int(os.environ.get("PORT", 5002))
     app.run(host="0.0.0.0", port=port, debug=False)
