@@ -370,7 +370,7 @@ export default function PricePrediction() {
       riskLow: "कम जोखिम",
       riskHigh: "उच्च जोखिम",
       riskStable: "स्थिर",
-      calendarAdvice: (c, best, worst) => `ऐतिहासिक रुझान बताते हैं कि बेलगावी में ${c} की कीमतें उच्च मांग के कारण ${best} के आसपास प्रीमियम पर पहुंच जाती हैं, जबकि ${worst} के आसपास जब बाजारों में नई फसल आती है तो कीमतें अक्सर गिर जाती हैं।`
+      calendarAdvice: (c, best, worst) => `ऐतिहासिक रुझान बताते हैं कि बेलगावी में ${c} की कीमतें उच्च मांग के कारण ${best} के आसपास प्रीमियम पर पहुंच जाती हैं, जबकि ${worst} के आसपास जब बाजारों में नई फसल आती है तो कीमतें अक्सर गिर जाती हैं.`
     },
     mr: {
       assistantTitle: "किंमत AI",
@@ -454,7 +454,7 @@ export default function PricePrediction() {
       rfFramework: "एन्सेम्बल",
       activeStatus: "सक्रिय",
       decisionTree: "डिसिजन ट्री",
-      dtFramework: "सिंगल स्प्लिट",
+      dtFramework: "सिंगल ಸ್ಪ್ಲಿಟ್",
       overfitStatus: "ओव्हरफिट",
       linearReg: "लिनियर रेग्रेसन",
       lrFramework: "OLS फ्रेमवर्क",
@@ -479,10 +479,10 @@ export default function PricePrediction() {
       trendSteady: "किंमत स्थिर आहे",
       trustHigh: "उच्च विश्वास",
       trustMedium: "मध्यम विश्वास",
-      trustVeryReliable: "अतिशय विश्वासार्ह",
-      riskLow: "कमी धोका",
+      trustVeryReliable: "ಅತಿशय ವಿಶ್ವಾಸಾರ್ಹ",
+      riskLow: "ಕಡಿಮೆ ಅಪಾಯ",
       riskHigh: "जास्त धोका",
-      riskStable: "स्थिर",
+      riskStable: "ಸ್ಥಿರ",
       calendarAdvice: (c, best, worst) => `ऐतिहासिक ट्रेंड दर्शवतात की बेळगावमधील ${c} च्या किमती उच्च मागणीमुळे ${best} च्या सुमारास प्रीमियम गाठतात, तर ${worst} च्या सुमारास बाजारात नवीन पिके आल्यावर किमती सामान्यतः घसरतात.`
     }
   };
@@ -637,7 +637,7 @@ export default function PricePrediction() {
   const netEstimatedEarningsChange = futureTotalValue - currentTotalValue;
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#eef2ff] via-[#f5f3ff] to-[#faf5ff] text-slate-900 font-sans antialiased relative flex items-center justify-center p-4 sm:p-8 overflow-x-hidden selection:bg-purple-200">
+    <div className="min-h-screen bg-gradient-to-tr from-[#eef2ff] via-[#f5f3ff] to-[#faf5ff] text-slate-900 font-sans antialiased relative flex items-center justify-center p-2 sm:p-6 overflow-x-hidden selection:bg-purple-200">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(16px); }
@@ -648,26 +648,26 @@ export default function PricePrediction() {
         }
       `}</style>
 
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[100px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[100px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[100px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[100px] pointer-events-none rounded-full" />
 
-      <div className="w-full max-w-5xl rounded-[32px] shadow-2xl shadow-indigo-950/30 border-[3px] border-slate-950 overflow-hidden transform transition-all duration-500 animate-fade-in-up relative z-10 bg-white">
+      <div className="w-full max-w-5xl rounded-2xl sm:rounded-[32px] shadow-2xl shadow-indigo-950/30 border-[3px] border-slate-950 overflow-hidden transform transition-all duration-500 animate-fade-in-up relative z-10 bg-white">
         
         <div className="h-2.5 bg-gradient-to-r from-blue-700 via-indigo-900 to-[#2FD77C] border-b-[3px] border-slate-950" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x-[3px] divide-slate-950">
           
-          <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between bg-gradient-to-b from-white to-slate-100/70 backdrop-blur-sm">
+          <div className="lg:col-span-5 p-4 sm:p-8 flex flex-col justify-between bg-gradient-to-b from-white to-slate-100/70 backdrop-blur-sm">
             <div className="space-y-6">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-14 h-14 bg-gradient-to-tr from-slate-950 via-slate-900 to-[#2FD77C] text-white rounded-2xl flex items-center justify-center text-2xl shadow-xl border-2 border-slate-950 transform hover:scale-105 transition-transform duration-300">
+              <div className="flex items-center space-x-3 sm:space-x-4 mb-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-tr from-slate-950 via-slate-900 to-[#2FD77C] text-white rounded-2xl flex items-center justify-center text-xl sm:text-2xl shadow-xl border-2 border-slate-950 flex-shrink-0">
                   {getCropIcon(crop)}
                 </div>
                 <div>
-                  <h1 className="text-2xl font-black text-slate-900 tracking-tight">
+                  <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-snug">
                     {crop ? `${currentText.crops[crop] || crop} ${currentText.assistantTitle}` : currentText.assistantTitle}
                   </h1>
-                  <p className="text-xs font-black text-indigo-950 tracking-wider uppercase">{currentText.subtitle}</p>
+                  <p className="text-[10px] sm:text-xs font-black text-indigo-950 tracking-wider uppercase">{currentText.subtitle}</p>
                 </div>
               </div>
 
@@ -686,7 +686,7 @@ export default function PricePrediction() {
                       setCrop(e.target.value);
                       setPrediction(null);
                     }}
-                    className="w-full bg-white border-2 border-slate-950 rounded-2xl p-4 text-slate-900 font-black text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#2FD77C] shadow-md transition-all duration-300"
+                    className="w-full bg-white border-2 border-slate-950 rounded-2xl p-3.5 sm:p-4 text-slate-900 font-black text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#2FD77C] shadow-md transition-all duration-300"
                   >
                     <option value="" disabled>{currentText.selectPrompt}</option>
                     {CROPS_LIST.map((item) => (
@@ -702,7 +702,7 @@ export default function PricePrediction() {
               </div>
               
               {prediction && showCalculator && (
-                <div className="bg-white border-2 border-slate-950 rounded-2xl p-5 shadow-2xl space-y-3 relative transition-all duration-500 animate-fade-in-up">
+                <div className="bg-white border-2 border-slate-950 rounded-2xl p-4 sm:p-5 shadow-xl space-y-3 relative transition-all duration-500 animate-fade-in-up">
                   <div className="flex justify-between items-center">
                     <span className="font-black text-slate-950 text-xs uppercase tracking-wider block">
                       {currentText.calculatorTitle}
@@ -747,16 +747,16 @@ export default function PricePrediction() {
                     : loading 
                       ? 'bg-slate-300 text-slate-500 border-slate-400 cursor-not-allowed' 
                       : 'bg-slate-950 text-white border-slate-950 shadow-xl hover:bg-black hover:scale-[1.01] active:scale-[0.99]'
-                } py-4 px-6 rounded-2xl font-black transition-all duration-300 uppercase tracking-widest text-xs sm:text-sm`}
+                } py-3.5 sm:py-4 px-6 rounded-2xl font-black transition-all duration-300 uppercase tracking-widest text-xs sm:text-sm`}
               >
                 {loading ? currentText.checkBtnLoading : crop ? currentText.checkBtnActive(currentText.crops[crop] || crop) : currentText.checkBtnDefault}
               </button>
             </div>
           </div>
 
-          <div className="lg:col-span-7 p-6 sm:p-10 bg-white min-h-[480px] flex flex-col justify-center transition-all duration-500">
+          <div className="lg:col-span-7 p-4 sm:p-8 lg:p-10 bg-white min-h-[480px] flex flex-col justify-center transition-all duration-500">
             {!prediction ? (
-              <div className="text-center py-16 space-y-4 animate-fade-in-up">
+              <div className="text-center py-12 sm:py-16 space-y-4 animate-fade-in-up">
                 <div className="text-5xl transform hover:scale-110 transition-transform duration-300 inline-block">
                   {getCropIcon(crop)}
                 </div>
@@ -772,25 +772,25 @@ export default function PricePrediction() {
                 
                 <div className="flex items-center justify-between border-b-2 border-slate-950 pb-3">
                   <span className="text-xs font-black text-slate-400 uppercase tracking-widest">{currentText.trendGraph}</span>
-                  <span className="text-[11px] bg-slate-950 text-white font-black px-3 py-1.5 rounded-xl border-2 border-slate-950 shadow-md">
+                  <span className="text-[10px] sm:text-[11px] bg-slate-950 text-white font-black px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border-2 border-slate-950 shadow-md">
                     {currentText.latestData(prediction.last_recorded_month)}
                   </span>
                 </div>
 
-                <div className="w-full h-48 min-w-[280px] bg-gradient-to-b from-slate-50 to-white p-2 rounded-2xl border-2 border-slate-950 shadow-inner transition-all duration-500 hover:shadow-lg">
-                  <ResponsiveContainer width="100%" height="100%" minWidth={200} minHeight={160}>
-                    <LineChart data={chartData} margin={{ top: 15, right: 15, left: -20, bottom: 5 }}>
+                <div className="w-full h-48 bg-gradient-to-b from-slate-50 to-white p-2 rounded-2xl border-2 border-slate-950 shadow-inner overflow-hidden">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={chartData} margin={{ top: 15, right: 10, left: -25, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="4 4" stroke="#cbd5e1" />
-                      <XAxis dataKey="name" stroke="#475569" fontSize={10} fontWeight="black" />
-                      <YAxis stroke="#475569" fontSize={10} fontWeight="black" domain={['dataMin - 100', 'dataMax + 100']} />
-                      <Tooltip labelStyle={{ color: "#94a3b8" }} itemStyle={{ color: "#ffffff" }} contentStyle={{ backgroundColor: "#020617", borderRadius: "14px", border: "2px solid #000", fontSize: "12px", fontWeight: "bold", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.4)" }} />
-                      <Line type="monotone" dataKey="Price" stroke="#0f172a" strokeWidth={4} isAnimationActive={true} animationDuration={3000} dot={{ r: 6, strokeWidth: 3, fill: '#2FD77C', stroke: '#0f172a' }} activeDot={{ r: 9 }} />
+                      <XAxis dataKey="name" stroke="#475569" fontSize={9} fontWeight="black" />
+                      <YAxis stroke="#475569" fontSize={9} fontWeight="black" domain={['dataMin - 100', 'dataMax + 100']} />
+                      <Tooltip labelStyle={{ color: "#94a3b8" }} itemStyle={{ color: "#ffffff" }} contentStyle={{ backgroundColor: "#020617", borderRadius: "14px", border: "2px solid #000", fontSize: "11px", fontWeight: "bold", boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.4)" }} />
+                      <Line type="monotone" dataKey="Price" stroke="#0f172a" strokeWidth={3} isAnimationActive={true} animationDuration={2000} dot={{ r: 5, strokeWidth: 2, fill: '#2FD77C', stroke: '#0f172a' }} activeDot={{ r: 7 }} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
 
                 {showCalculator && parsedQuintals > 0 && (
-                  <div className="bg-gradient-to-tr from-blue-600 via-indigo-400 via-75% to-slate-950 text-slate-900 rounded-2xl p-5 shadow-xl border-2 border-slate-950 transition-all duration-500 transform hover:scale-[1.01] flex flex-col justify-between relative overflow-hidden group">
+                  <div className="bg-gradient-to-tr from-blue-600 via-indigo-400 via-75% to-slate-950 text-slate-900 rounded-2xl p-4 sm:p-5 shadow-xl border-2 border-slate-950 transition-all duration-500 transform hover:scale-[1.01] flex flex-col justify-between relative overflow-hidden group">
                     <div>
                       <div className="flex justify-between items-center">
                         <span className="text-[10px] font-black tracking-widest text-slate-900 group-hover:text-black uppercase bg-white/60 px-2 py-0.5 rounded backdrop-blur-sm">
@@ -804,26 +804,26 @@ export default function PricePrediction() {
                       </div>
                       
                       <div className="mt-3 flex items-baseline space-x-2">
-                        <span className={`text-3xl font-black tracking-tight drop-shadow-sm ${
+                        <span className={`text-2xl sm:text-3xl font-black tracking-tight drop-shadow-sm ${
                           netEstimatedEarningsChange >= 0 ? 'text-emerald-950' : 'text-rose-950'
                         }`}>
                           {netEstimatedEarningsChange >= 0 ? `+ ₹${Math.round(netEstimatedEarningsChange)}` : `- ₹${Math.round(Math.abs(netEstimatedEarningsChange))}`}
                         </span>
-                        <span className="text-xs text-slate-700 font-black">{currentText.netReturnDelta}</span>
+                        <span className="text-[11px] sm:text-xs text-slate-700 font-black">{currentText.netReturnDelta}</span>
                       </div>
                       
                       <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-slate-900/10 pt-3 text-xs">
                         <div>
                           <span className="text-slate-800 block font-black uppercase tracking-wider text-[9px]">{currentText.todayVal}</span>
-                          <span className="text-slate-900 font-black text-sm bg-white/30 px-1.5 py-0.5 rounded">₹{Math.round(currentTotalValue)}</span>
+                          <span className="text-slate-900 font-black text-xs sm:text-sm bg-white/30 px-1.5 py-0.5 rounded">₹{Math.round(currentTotalValue)}</span>
                         </div>
                         <div>
                           <span className="text-slate-800 block font-black uppercase tracking-wider text-[9px]">{currentText.simulatedAiVal}</span>
-                          <span className="text-indigo-950 font-black text-sm bg-white/30 px-1.5 py-0.5 rounded">₹{Math.round(futureTotalValue)}</span>
+                          <span className="text-indigo-950 font-black text-xs sm:text-sm bg-white/30 px-1.5 py-0.5 rounded">₹{Math.round(futureTotalValue)}</span>
                         </div>
                         <div className="sm:text-right flex flex-col sm:items-end justify-center">
                           <span className="text-slate-300 block font-black uppercase tracking-wider text-[9px]">{currentText.timelineSummary}</span>
-                          <span className="text-white font-black text-xs sm:text-right bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
+                          <span className="text-white font-black text-[11px] sm:text-xs sm:text-right bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
                             {currentText.outlook}
                           </span>
                         </div>
@@ -839,28 +839,28 @@ export default function PricePrediction() {
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="bg-white border-2 border-slate-950 rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                  <div className="bg-white border-2 border-slate-950 rounded-2xl p-4 sm:p-5 shadow-md transition-all duration-300 flex flex-col justify-between">
                     <div>
                       <span className="text-xs font-black text-slate-400 block tracking-wide uppercase">{currentText.normalTrend}</span>
-                      <div className="text-3xl font-black text-slate-900 mt-2">₹{prediction.predictions.baseline_model_rs}</div>
+                      <div className="text-2xl sm:text-3xl font-black text-slate-900 mt-2">₹{prediction.predictions.baseline_model_rs}</div>
                     </div>
                     <span className="text-[10px] text-slate-400 font-bold block mt-4">{currentText.pastTrends}</span>
                   </div>
 
-                  <div className="bg-[#2FD77C] rounded-2xl p-5 border-2 border-slate-950 text-slate-900 shadow-[0_8px_20px_rgba(47,215,124,0.35)] transition-all duration-300 hover:scale-[1.01] flex flex-col justify-between">
+                  <div className="bg-[#2FD77C] rounded-2xl p-4 sm:p-5 border-2 border-slate-950 text-slate-900 shadow-[0_8px_20px_rgba(47,215,124,0.35)] transition-all duration-300 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between gap-2">
                         <span className="text-xs font-black text-slate-950 tracking-wide uppercase">
                           {currentText.weatherSmart}
                         </span>
-                        <span className={`text-[11px] font-black px-2.5 py-1 rounded-lg border border-slate-950/20 shadow-sm ${
+                        <span className={`text-[10px] sm:text-[11px] font-black px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg border border-slate-950/20 shadow-sm ${
                           priceDiff >= 0 ? 'bg-slate-950 text-[#2FD77C]' : 'bg-rose-700 text-white'
                         }`}>
-                          {priceDiff >= 0 ? `▲ Up +₹${priceDiff.toFixed(2)}` : `▼ Down -₹${Math.abs(priceDiff).toFixed(2)}`}
+                          {priceDiff >= 0 ? `▲ +₹${priceDiff.toFixed(2)}` : `▼ -₹${Math.abs(priceDiff).toFixed(2)}`}
                         </span>
                       </div>
-                      <div className="text-3xl font-black text-slate-955 mt-2">
+                      <div className="text-2xl sm:text-3xl font-black text-slate-955 mt-2">
                         ₹{simulatedPrice}
                       </div>
                     </div>
@@ -870,8 +870,8 @@ export default function PricePrediction() {
                   </div>
                 </div>
 
-                <div className="bg-slate-50 border-2 border-slate-950 p-5 rounded-2xl shadow-sm space-y-4">
-                  <div className="border-b-2 border-slate-950 pb-2.5 flex items-center justify-between">
+                <div className="bg-slate-50 border-2 border-slate-950 p-4 sm:p-5 rounded-2xl shadow-sm space-y-4">
+                  <div className="border-b-2 border-slate-950 pb-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <div>
                       <h3 className="text-xs font-black text-slate-900 uppercase tracking-widest">
                         {currentText.simulatorTitle}
@@ -882,7 +882,7 @@ export default function PricePrediction() {
                     </div>
                     <button
                       onClick={() => { setRainfallOffset(0); setDemandSurge(0); }}
-                      className="text-[10px] font-black bg-slate-200 hover:bg-slate-300 text-slate-800 px-2.5 py-1 rounded-lg border border-slate-400 transition-all uppercase"
+                      className="text-[10px] font-black bg-slate-200 hover:bg-slate-300 text-slate-800 px-2.5 py-1 rounded-lg border border-slate-400 transition-all uppercase self-start sm:self-auto"
                     >
                       {currentText.resetDials}
                     </button>
@@ -893,7 +893,7 @@ export default function PricePrediction() {
                       <div className="flex justify-between items-center text-[11px]">
                         <span className="font-bold text-slate-700">{currentText.rainfallVolume}</span>
                         <span className="font-black text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">
-                          {currentSimulatedRainfall} mm {rainfallOffset !== 0 && `(${rainfallOffset > 0 ? `+${rainfallOffset}` : rainfallOffset}mm)`}
+                          {currentSimulatedRainfall} mm
                         </span>
                       </div>
                       <input
@@ -907,7 +907,6 @@ export default function PricePrediction() {
                       />
                       <div className="flex justify-between text-[9px] text-slate-400 font-bold uppercase">
                         <span>{currentText.drought}</span>
-                        <span>{currentText.baselineRain(baseRainfall)}</span>
                         <span>{currentText.heavyRain}</span>
                       </div>
                     </div>
@@ -930,14 +929,13 @@ export default function PricePrediction() {
                       />
                       <div className="flex justify-between text-[9px] text-slate-400 font-bold uppercase">
                         <span>{currentText.lowDemand}</span>
-                        <span>{currentText.normalDemand}</span>
                         <span>{currentText.highDemand}</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="border-2 border-slate-950 bg-slate-50 p-5 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-inner">
+                <div className="border-2 border-slate-950 bg-slate-50 p-4 sm:p-5 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-inner">
                   <div className="text-left space-y-0.5">
                     <span className="text-xs font-black text-slate-900 block tracking-widest uppercase">
                       {currentText.broadcastTitle}
@@ -951,7 +949,7 @@ export default function PricePrediction() {
                     <button
                       onClick={handleSendSMS}
                       disabled={smsLoading}
-                      className={`w-full sm:w-auto font-black uppercase tracking-widest text-xs px-6 py-3.5 rounded-xl transition-all shadow-md border-2 border-slate-950 transform hover:scale-[1.02] ${
+                      className={`w-full sm:w-auto font-black uppercase tracking-widest text-xs px-6 py-3.5 rounded-xl transition-all shadow-md border-2 border-slate-950 ${
                         smsLoading 
                           ? "bg-slate-300 text-slate-500 border-slate-400 cursor-not-allowed" 
                           : "bg-slate-950 text-white hover:bg-black active:scale-[0.98]"
@@ -970,7 +968,7 @@ export default function PricePrediction() {
                   </div>
                 </div>
 
-                <div className="border-[3px] border-slate-950 bg-white p-5 rounded-2xl space-y-4 shadow-md transition-all duration-300">
+                <div className="border-[3px] border-slate-950 bg-white p-4 sm:p-5 rounded-2xl space-y-4 shadow-md">
                   <div className="flex justify-between items-center border-b-2 border-slate-950 pb-2">
                     <span className="text-xs font-black text-slate-900 uppercase tracking-widest block">
                       {currentText.benchmarkTitle}
@@ -984,8 +982,8 @@ export default function PricePrediction() {
                     {currentText.benchmarkDesc}
                   </p>
 
-                  <div className="pt-1">
-                    <table className="w-full text-left border-collapse">
+                  <div className="overflow-x-auto pt-1">
+                    <table className="w-full text-left border-collapse min-w-[320px]">
                       <thead>
                         <tr className="border-b-2 border-slate-950 text-[10px] font-black text-slate-500 uppercase tracking-wider">
                           <th className="pb-2 font-black px-2">{currentText.thModel}</th>
@@ -996,37 +994,31 @@ export default function PricePrediction() {
                         </tr>
                       </thead>
                       <tbody className="text-[11px] font-bold text-slate-800 divide-y divide-slate-950/10">
-                        <tr className="bg-indigo-50/40 text-slate-900 transition-all duration-300 transform hover:bg-slate-950 hover:text-white shadow-sm border border-transparent group">
-                          <td className="p-2.5 font-black text-slate-950 group-hover:text-white rounded-l-xl">{currentText.randomForest}</td>
-                          <td className="p-2.5 text-slate-400 font-medium group-hover:text-slate-300 hidden sm:table-cell">{currentText.rfFramework}</td>
-                          <td className="p-2.5 text-right font-black text-emerald-700 group-hover:text-[#2FD77C]">
-                            ₹{simulatedPrice}
-                          </td>
-                          <td className="p-2.5 text-right font-black text-emerald-700 group-hover:text-[#2FD77C]">92.4%</td>
+                        <tr className="bg-indigo-50/40 text-slate-900 transition-all">
+                          <td className="p-2.5 font-black text-slate-950 rounded-l-xl">{currentText.randomForest}</td>
+                          <td className="p-2.5 text-slate-400 font-medium hidden sm:table-cell">{currentText.rfFramework}</td>
+                          <td className="p-2.5 text-right font-black text-emerald-700">₹{simulatedPrice}</td>
+                          <td className="p-2.5 text-right font-black text-emerald-700">92.4%</td>
                           <td className="p-2.5 text-center rounded-r-xl">
-                            <span className="bg-emerald-600 text-white text-[9px] px-1.5 py-0.5 rounded font-black uppercase shadow-sm border border-slate-950/20 group-hover:bg-[#2FD77C] group-hover:text-slate-950">{currentText.activeStatus}</span>
+                            <span className="bg-emerald-600 text-white text-[9px] px-1.5 py-0.5 rounded font-black uppercase">{currentText.activeStatus}</span>
                           </td>
                         </tr>
-                        <tr className="transition-all duration-300 transform hover:bg-slate-950 hover:text-white shadow-sm border border-transparent group">
+                        <tr className="transition-all">
                           <td className="p-2.5 font-extrabold rounded-l-xl">{currentText.decisionTree}</td>
-                          <td className="p-2.5 text-slate-400 font-medium group-hover:text-slate-300 hidden sm:table-cell">{currentText.dtFramework}</td>
-                          <td className="p-2.5 text-right text-slate-600 group-hover:text-slate-200">
-                            ₹{(simulatedPrice * 0.94).toFixed(0)}
-                          </td>
-                          <td className="p-2.5 text-right text-amber-600 font-black group-hover:text-amber-400">84.3%</td>
+                          <td className="p-2.5 text-slate-400 font-medium hidden sm:table-cell">{currentText.dtFramework}</td>
+                          <td className="p-2.5 text-right text-slate-600">₹{(simulatedPrice * 0.94).toFixed(0)}</td>
+                          <td className="p-2.5 text-right text-amber-600 font-black">84.3%</td>
                           <td className="p-2.5 text-center rounded-r-xl">
-                            <span className="bg-amber-100 text-amber-800 text-[9px] px-1.5 py-0.5 rounded font-black uppercase group-hover:bg-amber-600 group-hover:text-white transition-colors">{currentText.overfitStatus}</span>
+                            <span className="bg-amber-100 text-amber-800 text-[9px] px-1.5 py-0.5 rounded font-black uppercase">{currentText.overfitStatus}</span>
                           </td>
                         </tr>
-                        <tr className="transition-all duration-300 transform hover:bg-slate-950 hover:text-white shadow-md border border-transparent group">
+                        <tr className="transition-all">
                           <td className="p-2.5 font-extrabold rounded-l-xl">{currentText.linearReg}</td>
-                          <td className="p-2.5 text-slate-400 font-medium group-hover:text-slate-300 hidden sm:table-cell">{currentText.lrFramework}</td>
-                          <td className="p-2.5 text-right text-slate-600 group-hover:text-slate-200">
-                            ₹{(simulatedPrice * 1.05).toFixed(0)}
-                          </td>
-                          <td className="p-2.5 text-right text-rose-600 font-black group-hover:text-rose-400">76.1%</td>
+                          <td className="p-2.5 text-slate-400 font-medium hidden sm:table-cell">{currentText.lrFramework}</td>
+                          <td className="p-2.5 text-right text-slate-600">₹{(simulatedPrice * 1.05).toFixed(0)}</td>
+                          <td className="p-2.5 text-right text-rose-600 font-black">76.1%</td>
                           <td className="p-2.5 text-center rounded-r-xl">
-                            <span className="bg-rose-100 text-rose-800 text-[9px] px-1.5 py-0.5 rounded font-black uppercase group-hover:bg-rose-600 group-hover:text-white transition-colors">{currentText.underfitStatus}</span>
+                            <span className="bg-rose-100 text-rose-800 text-[9px] px-1.5 py-0.5 rounded font-black uppercase">{currentText.underfitStatus}</span>
                           </td>
                         </tr>
                       </tbody>
@@ -1045,7 +1037,7 @@ export default function PricePrediction() {
                   </div>
                 </div>
 
-                <div className={`p-5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md ${farmerAdvice.bg}`}>
+                <div className={`p-4 sm:p-5 rounded-2xl shadow-sm ${farmerAdvice.bg}`}>
                   <div className="flex items-center space-x-3 mb-2">
                     <span className={`text-[10px] font-black tracking-widest px-2.5 py-1.5 rounded-lg border border-slate-950/20 ${farmerAdvice.badge}`}>
                       {farmerAdvice.trend}
@@ -1058,20 +1050,20 @@ export default function PricePrediction() {
                 </div>
 
                 {prediction.calendar_intelligence && (
-                  <div className="border-2 border-slate-950 bg-gradient-to-r from-slate-50 to-indigo-50/20 p-5 rounded-2xl space-y-4">
+                  <div className="border-2 border-slate-950 bg-gradient-to-r from-slate-50 to-indigo-50/20 p-4 sm:p-5 rounded-2xl space-y-4">
                     <span className="text-xs font-black text-slate-400 uppercase tracking-widest block">
                       {currentText.yearlyCalendar}
                     </span>
                     <div className="grid grid-cols-2 gap-4 text-center">
-                      <div className="bg-white p-3 rounded-xl border-2 border-slate-950 shadow-md transition-all hover:scale-[1.02] hover:shadow-lg">
+                      <div className="bg-white p-3 rounded-xl border-2 border-slate-950 shadow-md">
                         <span className="text-xs font-black text-emerald-600 block uppercase">{currentText.bestMonth}</span>
-                        <span className="text-lg font-black text-slate-900 block mt-0.5">
+                        <span className="text-base sm:text-lg font-black text-slate-900 block mt-0.5">
                           {currentText.months[prediction.calendar_intelligence.best_month] || prediction.calendar_intelligence.best_month}
                         </span>
                       </div>
-                      <div className="bg-white p-3 rounded-xl border-2 border-slate-950 shadow-md transition-all hover:scale-[1.02] hover:shadow-lg">
+                      <div className="bg-white p-3 rounded-xl border-2 border-slate-950 shadow-md">
                         <span className="text-xs font-black text-rose-600 block uppercase">{currentText.worstMonth}</span>
-                        <span className="text-lg font-black text-slate-900 block mt-0.5">
+                        <span className="text-base sm:text-lg font-black text-slate-900 block mt-0.5">
                           {currentText.months[prediction.calendar_intelligence.toughest_month] || prediction.calendar_intelligence.toughest_month}
                         </span>
                       </div>

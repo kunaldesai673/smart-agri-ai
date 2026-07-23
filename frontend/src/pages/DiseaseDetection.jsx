@@ -161,7 +161,7 @@ export default function DiseaseDetection() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#eef2ff] via-[#f5f3ff] to-[#faf5ff] text-slate-900 font-sans antialiased relative flex items-center justify-center p-4 sm:p-8 overflow-x-hidden selection:bg-purple-200">
+    <div className="min-h-screen bg-gradient-to-tr from-[#eef2ff] via-[#f5f3ff] to-[#faf5ff] text-slate-900 font-sans antialiased relative flex items-center justify-center p-2 sm:p-6 overflow-x-hidden selection:bg-purple-200">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(16px); }
@@ -172,12 +172,12 @@ export default function DiseaseDetection() {
         }
       `}</style>
 
-      {/* Canva-style ambient gradient glow effects outside the main box */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[100px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[100px] pointer-events-none rounded-full" />
+      {/* Canva-style ambient gradient glow effects optimized for mobile */}
+      <div className="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[85px] sm:blur-[100px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[85px] sm:blur-[100px] pointer-events-none rounded-full" />
 
       {/* Main Structural Layout Wrapper */}
-      <div className="w-full max-w-5xl rounded-[32px] shadow-2xl shadow-indigo-950/20 border-[3px] border-slate-950 overflow-hidden bg-white/90 backdrop-blur-xl relative z-10 animate-fade-in-up">
+      <div className="w-full max-w-5xl rounded-2xl sm:rounded-[32px] shadow-2xl shadow-indigo-950/20 border-[3px] border-slate-950 overflow-hidden bg-white/90 backdrop-blur-xl relative z-10 animate-fade-in-up">
         
         {/* Top Gradient Accent Bar */}
         <div className="h-2.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 border-b-[3px] border-slate-950" />
@@ -185,15 +185,15 @@ export default function DiseaseDetection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x-[3px] divide-slate-950">
           
           {/* LEFT SIDE: Image Source Controls (5 Columns) */}
-          <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-gradient-to-b from-white/95 to-slate-100/75 backdrop-blur-sm">
+          <div className="lg:col-span-5 p-4 sm:p-8 flex flex-col justify-between bg-gradient-to-b from-white/95 to-slate-100/75 backdrop-blur-sm">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-tr from-slate-900 via-slate-800 to-emerald-600 text-white rounded-2xl flex items-center justify-center border-2 border-slate-950 text-2xl shadow-md">
+                <div className="w-12 h-12 bg-gradient-to-tr from-slate-900 via-slate-800 to-emerald-600 text-white rounded-2xl flex items-center justify-center border-2 border-slate-950 text-2xl shadow-md flex-shrink-0">
                   🍃
                 </div>
                 <div>
-                  <h1 className="text-xl font-black text-slate-900">{currentText.title}</h1>
-                  <p className="text-xs font-bold text-indigo-600 tracking-wider uppercase">{currentText.subtitle}</p>
+                  <h1 className="text-lg sm:text-xl font-black text-slate-900">{currentText.title}</h1>
+                  <p className="text-[10px] sm:text-xs font-bold text-indigo-600 tracking-wider uppercase">{currentText.subtitle}</p>
                 </div>
               </div>
 
@@ -208,7 +208,7 @@ export default function DiseaseDetection() {
                 <div className="grid grid-cols-2 gap-3">
                   
                   {/* OPTION 1: MOBILE / DIRECT CAMERA CAPTURE */}
-                  <label className="flex flex-col items-center justify-center p-4 bg-white border-2 border-slate-950 rounded-2xl hover:border-emerald-600 cursor-pointer text-center transition-all shadow-sm group">
+                  <label className="flex flex-col items-center justify-center p-3.5 sm:p-4 bg-white border-2 border-slate-950 rounded-2xl hover:border-emerald-600 cursor-pointer text-center transition-all shadow-sm group">
                     <span className="text-2xl group-hover:scale-110 transition-transform">📸</span>
                     <span className="text-xs font-black text-slate-900 mt-1.5">{currentText.openCamera}</span>
                     <span className="text-[10px] text-slate-400 mt-0.5">{currentText.takePhoto}</span>
@@ -222,7 +222,7 @@ export default function DiseaseDetection() {
                   </label>
 
                   {/* OPTION 2: GALLERY SELECT */}
-                  <label className="flex flex-col items-center justify-center p-4 bg-white border-2 border-slate-950 rounded-2xl hover:border-emerald-600 cursor-pointer text-center transition-all shadow-sm group">
+                  <label className="flex flex-col items-center justify-center p-3.5 sm:p-4 bg-white border-2 border-slate-950 rounded-2xl hover:border-emerald-600 cursor-pointer text-center transition-all shadow-sm group">
                     <span className="text-2xl group-hover:scale-110 transition-transform">📁</span>
                     <span className="text-xs font-black text-slate-900 mt-1.5">{currentText.fromGallery}</span>
                     <span className="text-[10px] text-slate-400 mt-0.5">{currentText.savedFile}</span>
@@ -245,13 +245,13 @@ export default function DiseaseDetection() {
             </div>
 
             {/* Scan Submission Button */}
-            <div className="mt-6 lg:mt-0">
+            <div className="mt-6">
               <button
                 onClick={detectDisease}
                 disabled={loading}
                 className={`w-full border-2 border-slate-950 ${
                   loading ? 'bg-slate-300 text-slate-500 cursor-not-allowed' : 'bg-slate-950 hover:bg-black text-white active:scale-[0.99]'
-                } py-4 px-4 rounded-2xl font-black shadow-lg transition-all uppercase tracking-widest text-xs sm:text-sm`}
+                } py-3.5 sm:py-4 px-4 rounded-2xl font-black shadow-lg transition-all uppercase tracking-widest text-xs sm:text-sm`}
               >
                 {loading ? currentText.scanBtnLoading : currentText.scanBtnDefault}
               </button>
@@ -259,7 +259,7 @@ export default function DiseaseDetection() {
           </div>
 
           {/* RIGHT SIDE: Visual Previews & Multi-Lingual Diagnostics Output (7 Columns) */}
-          <div className="lg:col-span-7 p-6 sm:p-8 bg-white min-h-[420px] flex flex-col justify-center">
+          <div className="lg:col-span-7 p-4 sm:p-8 lg:p-10 bg-white min-h-[420px] flex flex-col justify-center">
             
             {/* Case A: Initial State */}
             {!preview && !result && (
@@ -304,7 +304,7 @@ export default function DiseaseDetection() {
 
                       <div className="bg-emerald-50 border-2 border-slate-950 rounded-2xl p-4 flex flex-col justify-center shadow-2xs">
                         <span className="text-[10px] font-bold text-emerald-800 block uppercase tracking-wide">{currentText.detectedCondition}</span>
-                        <div className="text-xl font-black text-slate-950 mt-1 uppercase tracking-tight leading-tight">
+                        <div className="text-lg sm:text-xl font-black text-slate-950 mt-1 uppercase tracking-tight leading-tight">
                           {result.full_data[globalLang]?.name || result.full_data['en'].name}
                         </div>
                         <span className="text-[11px] font-black text-emerald-800 mt-1.5 inline-flex items-center">

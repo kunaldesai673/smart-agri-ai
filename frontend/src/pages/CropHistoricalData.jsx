@@ -28,8 +28,8 @@ export default function CropHistoricalData() {
     en: {
       title: "Historical Crop Price Records",
       subtitle: "Belgaum APMC Mandi Data Archive (2020 - 2026)",
-      viewByCrop: "🌾 View By Single Crop",
-      viewByMonth: "🗓️ View All Crops By Month",
+      viewByCrop: "🌾 Single Crop",
+      viewByMonth: "🗓️ By Month",
       loadingText: "Loading Mandi Price Database...",
       retryLoad: "Retry Load",
       selectCropLabel: "Select Crop",
@@ -41,10 +41,10 @@ export default function CropHistoricalData() {
       highestPrice: "Highest Price",
       lowestPrice: "Lowest Price",
       tableMonthYear: "Month & Year",
-      tableWholesalePrice: "Wholesale Price (₹)",
-      tablePrevPrice: "Prev Month Price",
-      tableShift: "Monthly Shift",
-      tableRainfall: "Rainfall (mm)",
+      tableWholesalePrice: "Price (₹)",
+      tablePrevPrice: "Prev Month",
+      tableShift: "Shift",
+      tableRainfall: "Rain (mm)",
       selectTargetMonth: "Select Target Month & Year",
       marketPrice: "Market Price",
       perQuintal: "/ Quintal",
@@ -65,8 +65,8 @@ export default function CropHistoricalData() {
     kn: {
       title: "ಐತಿಹಾಸಿಕ ಬೆಳೆ ಬೆಲೆ ದಾಖಲೆಗಳು",
       subtitle: "ಬೆಳಗಾವಿ APMC ಮಂಡಿ ಡೇಟಾ ಆರ್ಕೈವ್ (2020 - 2026)",
-      viewByCrop: "🌾 ಒಂದೇ ಬೆಳೆಯಿಂದ ವೀಕ್ಷಿಸಿ",
-      viewByMonth: "🗓️ ತಿಂಗಳ ಪ್ರಕಾರ ಎಲ್ಲಾ ಬೆಳೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
+      viewByCrop: "🌾 ಒಂದೇ ಬೆಳೆ",
+      viewByMonth: "🗓️ ತಿಂಗಳ ಪ್ರಕಾರ",
       loadingText: "ಮಂಡಿ ಬೆಲೆ ಡೇಟಾಬೇಸ್ ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
       retryLoad: "ಪುನಃ ಪ್ರಯತ್ನಿಸಿ",
       selectCropLabel: "ಬೆಳೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
@@ -78,9 +78,9 @@ export default function CropHistoricalData() {
       highestPrice: "ಅತ್ಯಧಿಕ ಬೆಲೆ",
       lowestPrice: "ಕನಿಷ್ಠ ಬೆಲೆ",
       tableMonthYear: "ತಿಂಗಳು ಮತ್ತು ವರ್ಷ",
-      tableWholesalePrice: "ಸಗಟು ಬೆಲೆ (₹)",
-      tablePrevPrice: " ಹಿಂದಿನ ತಿಂಗಳ ಬೆಲೆ",
-      tableShift: "ಮಾಸಿಕ ಬದಲಾವಣೆ",
+      tableWholesalePrice: "ಬೆಲೆ (₹)",
+      tablePrevPrice: "ಹಿಂದಿನ ತಿಂಗಳು",
+      tableShift: "ಬದಲಾವಣೆ",
       tableRainfall: "ಮಳೆ (ಮಿಮೀ)",
       selectTargetMonth: "ಗುರಿ ತಿಂಗಳು ಮತ್ತು ವರ್ಷವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
       marketPrice: "ಮಾರುಕಟ್ಟೆ ಬೆಲೆ",
@@ -102,8 +102,8 @@ export default function CropHistoricalData() {
     hi: {
       title: "ऐतिहासिक फसल मूल्य रिकॉर्ड",
       subtitle: "बेलगावी एपीएमसी मंडी डेटा संग्रह (2020 - 2026)",
-      viewByCrop: "🌾 एकल फसल द्वारा देखें",
-      viewByMonth: "🗓️ महीने के अनुसार सभी फसलें देखें",
+      viewByCrop: "🌾 एकल फसल",
+      viewByMonth: "🗓️ महीने के अनुसार",
       loadingText: "मंडी मूल्य डेटाबेस लोड हो रहा है...",
       retryLoad: "पुनः प्रयास करें",
       selectCropLabel: "फसल चुनें",
@@ -115,9 +115,9 @@ export default function CropHistoricalData() {
       highestPrice: "सर्वोच्च मूल्य",
       lowestPrice: "न्यूनतम मूल्य",
       tableMonthYear: "माह और वर्ष",
-      tableWholesalePrice: "थोक मूल्य (₹)",
-      tablePrevPrice: "पिछले माह का मूल्य",
-      tableShift: "मासिक बदलाव",
+      tableWholesalePrice: "मूल्य (₹)",
+      tablePrevPrice: "पिछला माह",
+      tableShift: "बदलाव",
       tableRainfall: "वर्षा (मिमी)",
       selectTargetMonth: "लक्ष्य माह और वर्ष चुनें",
       marketPrice: "बाजार मूल्य",
@@ -139,8 +139,8 @@ export default function CropHistoricalData() {
     mr: {
       title: "ऐतिहासिक पीक किंमत नोंदी",
       subtitle: "बेळगाव APMC मंडी डेटा संग्रह (2020 - 2026)",
-      viewByCrop: "🌾 एका पिकाद्वारे पहा",
-      viewByMonth: "🗓️ महिन्यानुसार सर्व पिके पहा",
+      viewByCrop: "🌾 एका पिकाद्वारे",
+      viewByMonth: "🗓️ महिन्यानुसार",
       loadingText: "मंडी किंमत डेटाबेस लोड होत आहे...",
       retryLoad: "पुन्हा प्रयत्न करा",
       selectCropLabel: "पीक निवडा",
@@ -152,9 +152,9 @@ export default function CropHistoricalData() {
       highestPrice: "सर्वाधिक किंमत",
       lowestPrice: "सर्वात कमी किंमत",
       tableMonthYear: "महिना आणि वर्ष",
-      tableWholesalePrice: "घाऊक किंमत (₹)",
-      tablePrevPrice: "मागील महिन्याची किंमत",
-      tableShift: "मासिक बदल",
+      tableWholesalePrice: "किंमत (₹)",
+      tablePrevPrice: "मागील महिना",
+      tableShift: "बदल",
       tableRainfall: "पाऊस (मिमी)",
       selectTargetMonth: "लक्ष्य महिना आणि वर्ष निवडा",
       marketPrice: "बाजारभाव",
@@ -251,7 +251,7 @@ export default function CropHistoricalData() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#eef2ff] via-[#f5f3ff] to-[#faf5ff] text-slate-900 font-sans antialiased relative flex items-center justify-center p-4 sm:p-8 overflow-x-hidden selection:bg-purple-200">
+    <div className="min-h-screen bg-gradient-to-tr from-[#eef2ff] via-[#f5f3ff] to-[#faf5ff] text-slate-900 font-sans antialiased relative flex items-center justify-center p-2 sm:p-6 overflow-x-hidden selection:bg-purple-200">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(16px); }
@@ -262,32 +262,32 @@ export default function CropHistoricalData() {
         }
       `}</style>
 
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[100px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[100px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[85px] sm:blur-[100px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[85px] sm:blur-[100px] pointer-events-none rounded-full" />
 
-      <div className="w-full max-w-6xl rounded-[32px] shadow-2xl shadow-indigo-950/20 border-[3px] border-slate-950 overflow-hidden bg-white/85 backdrop-blur-xl relative z-10 animate-fade-in-up">
+      <div className="w-full max-w-6xl rounded-2xl sm:rounded-[32px] shadow-2xl shadow-indigo-950/20 border-[3px] border-slate-950 overflow-hidden bg-white/85 backdrop-blur-xl relative z-10 animate-fade-in-up">
         
         <div className="h-2.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 border-b-[3px] border-slate-950" />
 
-        <div className="p-6 sm:p-10 space-y-6">
+        <div className="p-4 sm:p-10 space-y-6">
           
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b-2 border-slate-950 pb-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b-2 border-slate-950 pb-5">
             <div>
-              <div className="flex items-center gap-3">
-                <span className="text-3xl">📜</span>
-                <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <span className="text-2xl sm:text-3xl">📜</span>
+                <h1 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">
                   {currentText.title}
                 </h1>
               </div>
-              <p className="text-xs font-bold text-indigo-600 tracking-wider uppercase mt-1">
+              <p className="text-[10px] sm:text-xs font-bold text-indigo-600 tracking-wider uppercase mt-1">
                 {currentText.subtitle}
               </p>
             </div>
 
-            <div className="flex items-center bg-slate-100 p-1.5 rounded-2xl border-2 border-slate-950 shadow-inner self-start md:self-auto">
+            <div className="flex items-center bg-slate-100 p-1.5 rounded-2xl border-2 border-slate-950 shadow-inner self-stretch sm:self-auto justify-center">
               <button
                 onClick={() => setViewMode("by-crop")}
-                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                className={`flex-1 sm:flex-initial px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                   viewMode === "by-crop"
                     ? "bg-slate-950 text-white shadow-md border-2 border-slate-950"
                     : "text-slate-600 hover:text-slate-950"
@@ -297,7 +297,7 @@ export default function CropHistoricalData() {
               </button>
               <button
                 onClick={() => setViewMode("by-month")}
-                className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                className={`flex-1 sm:flex-initial px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                   viewMode === "by-month"
                     ? "bg-slate-950 text-white shadow-md border-2 border-slate-950"
                     : "text-slate-600 hover:text-slate-950"
@@ -318,7 +318,7 @@ export default function CropHistoricalData() {
           )}
 
           {error && (
-            <div className="bg-rose-100 border-2 border-slate-950 p-5 rounded-2xl text-rose-900 font-bold text-xs flex justify-between items-center shadow-md">
+            <div className="bg-rose-100 border-2 border-slate-950 p-4 sm:p-5 rounded-2xl text-rose-900 font-bold text-xs flex flex-col sm:flex-row justify-between items-center gap-3 shadow-md">
               <span>⚠️ {error}</span>
               <button
                 onClick={fetchHistoricalData}
@@ -342,7 +342,7 @@ export default function CropHistoricalData() {
                         <select
                           value={selectedCrop}
                           onChange={(e) => setSelectedCrop(e.target.value)}
-                          className="w-full bg-white border-2 border-slate-950 rounded-2xl p-3.5 text-slate-900 font-bold text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm"
+                          className="w-full bg-white border-2 border-slate-950 rounded-2xl p-3 sm:p-3.5 text-slate-900 font-bold text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm"
                         >
                           {CROPS_LIST.map((c) => (
                             <option key={c.key} value={c.key}>
@@ -370,46 +370,46 @@ export default function CropHistoricalData() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <div className="bg-slate-50 border-2 border-slate-950 p-4 rounded-2xl">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                    <div className="bg-slate-50 border-2 border-slate-950 p-3 sm:p-4 rounded-2xl">
                       <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">
                         {currentText.totalMonthsRecorded}
                       </span>
-                      <span className="text-xl font-black text-slate-900">{cropRecords.length} {currentText.rows}</span>
+                      <span className="text-lg sm:text-xl font-black text-slate-900">{cropRecords.length} {currentText.rows}</span>
                     </div>
 
-                    <div className="bg-emerald-50 border-2 border-slate-950 p-4 rounded-2xl">
+                    <div className="bg-emerald-50 border-2 border-slate-950 p-3 sm:p-4 rounded-2xl">
                       <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-wider block">
                         {currentText.avgPrice}
                       </span>
-                      <span className="text-xl font-black text-emerald-950">₹{avgPrice} / Q</span>
+                      <span className="text-lg sm:text-xl font-black text-emerald-950">₹{avgPrice} / Q</span>
                     </div>
 
-                    <div className="bg-blue-50 border-2 border-slate-950 p-4 rounded-2xl">
+                    <div className="bg-blue-50 border-2 border-slate-950 p-3 sm:p-4 rounded-2xl">
                       <span className="text-[10px] font-bold text-blue-800 uppercase tracking-wider block">
                         {currentText.highestPrice}
                       </span>
-                      <span className="text-xl font-black text-blue-950">₹{maxPrice} / Q</span>
+                      <span className="text-lg sm:text-xl font-black text-blue-950">₹{maxPrice} / Q</span>
                     </div>
 
-                    <div className="bg-amber-50 border-2 border-slate-950 p-4 rounded-2xl">
+                    <div className="bg-amber-50 border-2 border-slate-950 p-3 sm:p-4 rounded-2xl">
                       <span className="text-[10px] font-bold text-amber-800 uppercase tracking-wider block">
                         {currentText.lowestPrice}
                       </span>
-                      <span className="text-xl font-black text-amber-950">₹{minPrice} / Q</span>
+                      <span className="text-lg sm:text-xl font-black text-amber-950">₹{minPrice} / Q</span>
                     </div>
                   </div>
 
                   <div className="border-2 border-slate-950 rounded-2xl overflow-hidden shadow-md">
-                    <div className="max-h-[460px] overflow-y-auto">
-                      <table className="w-full text-left border-collapse">
+                    <div className="max-h-[460px] overflow-y-auto overflow-x-auto">
+                      <table className="w-full text-left border-collapse min-w-[340px]">
                         <thead className="sticky top-0 bg-slate-950 text-white text-xs font-bold uppercase tracking-wider">
                           <tr>
-                            <th className="p-3.5">{currentText.tableMonthYear}</th>
-                            <th className="p-3.5 text-right">{currentText.tableWholesalePrice}</th>
-                            <th className="p-3.5 text-right">{currentText.tablePrevPrice}</th>
-                            <th className="p-3.5 text-right">{currentText.tableShift}</th>
-                            <th className="p-3.5 text-right">{currentText.tableRainfall}</th>
+                            <th className="p-3 sm:p-3.5">{currentText.tableMonthYear}</th>
+                            <th className="p-3 sm:p-3.5 text-right">{currentText.tableWholesalePrice}</th>
+                            <th className="p-3 sm:p-3.5 text-right">{currentText.tablePrevPrice}</th>
+                            <th className="p-3 sm:p-3.5 text-right">{currentText.tableShift}</th>
+                            <th className="p-3 sm:p-3.5 text-right">{currentText.tableRainfall}</th>
                           </tr>
                         </thead>
                         <tbody className="text-xs font-medium divide-y divide-slate-200">
@@ -419,21 +419,21 @@ export default function CropHistoricalData() {
 
                             return (
                               <tr key={idx} className="hover:bg-slate-100 transition-colors">
-                                <td className="p-3.5 font-bold text-slate-900">{row?.Month_Year || "N/A"}</td>
-                                <td className="p-3.5 text-right font-bold text-slate-950 text-sm">
+                                <td className="p-3 sm:p-3.5 font-bold text-slate-900 whitespace-nowrap">{row?.Month_Year || "N/A"}</td>
+                                <td className="p-3 sm:p-3.5 text-right font-bold text-slate-950 text-xs sm:text-sm whitespace-nowrap">
                                   ₹{row?.Price ?? "N/A"}
                                 </td>
-                                <td className="p-3.5 text-right text-slate-500">
+                                <td className="p-3 sm:p-3.5 text-right text-slate-500 whitespace-nowrap">
                                   {row?.Prev_Month ? `₹${row.Prev_Month}` : "-"}
                                 </td>
-                                <td className="p-3.5 text-right font-bold">
+                                <td className="p-3 sm:p-3.5 text-right font-bold whitespace-nowrap">
                                   <span className={`px-2 py-0.5 rounded border border-slate-950/20 text-[10px] ${
                                     isPositive ? "bg-emerald-100 text-emerald-900" : "bg-rose-100 text-rose-900"
                                   }`}>
                                     {isPositive ? `▲ +${changeM}%` : `▼ ${changeM}%`}
                                   </span>
                                 </td>
-                                <td className="p-3.5 text-right text-slate-700">
+                                <td className="p-3 sm:p-3.5 text-right text-slate-700 whitespace-nowrap">
                                   {row?.Rainfall_mm != null ? `${row.Rainfall_mm} mm` : "0 mm"}
                                 </td>
                               </tr>
@@ -449,7 +449,7 @@ export default function CropHistoricalData() {
 
               {viewMode === "by-month" && (
                 <div className="space-y-6">
-                  <div className="max-w-md space-y-1">
+                  <div className="w-full sm:max-w-md space-y-1">
                     <label className="text-xs font-bold text-slate-500 uppercase tracking-widest block">
                       {currentText.selectTargetMonth}
                     </label>
@@ -457,7 +457,7 @@ export default function CropHistoricalData() {
                       <select
                         value={selectedMonthYear}
                         onChange={(e) => setSelectedMonthYear(e.target.value)}
-                        className="w-full bg-white border-2 border-slate-950 rounded-2xl p-3.5 text-slate-900 font-bold text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm"
+                        className="w-full bg-white border-2 border-slate-950 rounded-2xl p-3 sm:p-3.5 text-slate-900 font-bold text-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm"
                       >
                         {uniqueMonths.map((m) => (
                           <option key={m} value={m}>
@@ -471,7 +471,7 @@ export default function CropHistoricalData() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                     {CROPS_LIST.map((cropObj) => {
                       const record = monthRecords.find(
                         (r) => r?.Crop && r.Crop.toString().toLowerCase() === cropObj.key.toLowerCase()
@@ -485,18 +485,18 @@ export default function CropHistoricalData() {
                       return (
                         <div
                           key={cropObj.key}
-                          className="border-2 border-slate-950 rounded-2xl p-5 bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                          className="border-2 border-slate-950 rounded-2xl p-4 sm:p-5 bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
                         >
                           <div>
-                            <div className="flex items-center justify-between border-b-2 border-slate-950 pb-3">
-                              <div className="flex items-center gap-2.5">
-                                <span className="text-2xl">{cropObj.icon}</span>
-                                <span className="font-bold text-slate-900 text-base">
+                            <div className="flex items-center justify-between border-b-2 border-slate-950 pb-3 gap-2">
+                              <div className="flex items-center gap-2">
+                                <span className="text-xl sm:text-2xl">{cropObj.icon}</span>
+                                <span className="font-bold text-slate-900 text-sm sm:text-base">
                                   {cropObj.label}
                                 </span>
                               </div>
-                              <span className="text-[10px] font-bold bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-950">
-                                {selectedMonthYear || "Selected Month"}
+                              <span className="text-[10px] font-bold bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-950 truncate max-w-[120px]">
+                                {selectedMonthYear || "Selected"}
                               </span>
                             </div>
 
@@ -505,7 +505,7 @@ export default function CropHistoricalData() {
                                 <span className="text-[10px] font-bold text-slate-400 block uppercase">
                                   {currentText.marketPrice}
                                 </span>
-                                <div className="text-2xl font-black text-slate-950 mt-0.5">
+                                <div className="text-xl sm:text-2xl font-black text-slate-950 mt-0.5">
                                   ₹{price} <span className="text-xs text-slate-500 font-bold">{currentText.perQuintal}</span>
                                 </div>
                               </div>

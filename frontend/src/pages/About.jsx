@@ -162,31 +162,31 @@ export default function About() {
   const currentText = text[globalLang] || text.en;
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#eef2ff] via-[#f5f3ff] to-[#faf5ff] text-slate-900 font-sans antialiased relative flex items-center justify-center p-4 sm:p-8 overflow-x-hidden selection:bg-purple-200">
+    <div className="min-h-screen bg-gradient-to-tr from-[#eef2ff] via-[#f5f3ff] to-[#faf5ff] text-slate-900 font-sans antialiased relative flex items-center justify-center p-2 sm:p-6 overflow-x-hidden selection:bg-purple-200">
       
-      {/* Canva-style ambient gradient glow effects outside the main box */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[100px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[100px] pointer-events-none rounded-full" />
+      {/* Canva-style ambient gradient glow effects optimized for mobile */}
+      <div className="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[85px] sm:blur-[100px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[85px] sm:blur-[100px] pointer-events-none rounded-full" />
 
       {/* Main Structural Layout Wrapper */}
-      <div className="w-full max-w-4xl rounded-[32px] shadow-2xl shadow-indigo-950/20 border-[3px] border-slate-950 overflow-hidden bg-white/90 backdrop-blur-xl relative z-10 animate-fade-in-up">
+      <div className="w-full max-w-4xl rounded-2xl sm:rounded-[32px] shadow-2xl shadow-indigo-950/20 border-[3px] border-slate-950 overflow-hidden bg-white/90 backdrop-blur-xl relative z-10 animate-fade-in-up">
         
         {/* Dynamic Bold Color Strip */}
         <div className="h-2.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 border-b-[3px] border-slate-950" />
 
-        <div className="p-6 sm:p-10 space-y-8 max-h-[85vh] overflow-y-auto">
+        <div className="p-4 sm:p-10 space-y-8 max-h-[85vh] overflow-y-auto">
           
           {/* Header Title Section */}
           <div className="text-center space-y-2 border-b-2 border-slate-950 pb-6">
-            <h1 className="text-3xl font-black text-slate-900 tracking-tight">{currentText.title}</h1>
-            <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest">
+            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{currentText.title}</h1>
+            <p className="text-[10px] sm:text-xs font-bold text-indigo-600 uppercase tracking-widest">
               {currentText.subtitle}
             </p>
           </div>
 
           {/* Section 1: Project Overview */}
           <div className="space-y-3">
-            <h2 className="text-sm font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
+            <h2 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
               <span>📌</span> {currentText.sec1Title}
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
@@ -198,7 +198,7 @@ export default function About() {
 
           {/* Section 2: How We Implemented Our Project (Long Format Table Structure) */}
           <div className="space-y-4">
-            <h2 className="text-sm font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
+            <h2 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
               <span>⚙️</span> {currentText.sec2Title}
             </h2>
             <p className="text-xs text-slate-500 font-medium">
@@ -206,48 +206,50 @@ export default function About() {
             </p>
 
             <div className="border-2 border-slate-950 rounded-2xl overflow-hidden shadow-sm">
-              <table className="w-full text-left border-collapse">
-                <thead className="bg-slate-950 text-white text-xs font-bold uppercase tracking-wider">
-                  <tr>
-                    <th className="p-3.5 w-1/3 border-r border-slate-800">{currentText.tableLayer}</th>
-                    <th className="p-3.5">{currentText.tableDetails}</th>
-                  </tr>
-                </thead>
-                <tbody className="text-xs font-medium divide-y divide-slate-200">
-                  <tr className="hover:bg-slate-50">
-                    <td className="p-3.5 font-bold text-slate-900 border-r border-slate-200 bg-slate-50/50">
-                      {currentText.frontendLayer}
-                    </td>
-                    <td className="p-3.5 text-slate-600 leading-relaxed">
-                      {currentText.frontendDesc}
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="p-3.5 font-bold text-slate-900 border-r border-slate-200 bg-slate-50/50">
-                      {currentText.backendLayer}
-                    </td>
-                    <td className="p-3.5 text-slate-600 leading-relaxed">
-                      {currentText.backendDesc}
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="p-3.5 font-bold text-slate-900 border-r border-slate-200 bg-slate-50/50">
-                      {currentText.aiDoctorLayer}
-                    </td>
-                    <td className="p-3.5 text-slate-600 leading-relaxed">
-                      {currentText.aiDoctorDesc}
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="p-3.5 font-bold text-slate-900 border-r border-slate-200 bg-slate-50/50">
-                      {currentText.priceLayer}
-                    </td>
-                    <td className="p-3.5 text-slate-600 leading-relaxed">
-                      {currentText.priceDesc}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse min-w-[500px]">
+                  <thead className="bg-slate-950 text-white text-xs font-bold uppercase tracking-wider">
+                    <tr>
+                      <th className="p-3 sm:p-3.5 w-1/3 border-r border-slate-800">{currentText.tableLayer}</th>
+                      <th className="p-3 sm:p-3.5">{currentText.tableDetails}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-xs font-medium divide-y divide-slate-200">
+                    <tr className="hover:bg-slate-50">
+                      <td className="p-3 sm:p-3.5 font-bold text-slate-900 border-r border-slate-200 bg-slate-50/50 whitespace-nowrap">
+                        {currentText.frontendLayer}
+                      </td>
+                      <td className="p-3 sm:p-3.5 text-slate-600 leading-relaxed">
+                        {currentText.frontendDesc}
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-slate-50">
+                      <td className="p-3 sm:p-3.5 font-bold text-slate-900 border-r border-slate-200 bg-slate-50/50 whitespace-nowrap">
+                        {currentText.backendLayer}
+                      </td>
+                      <td className="p-3 sm:p-3.5 text-slate-600 leading-relaxed">
+                        {currentText.backendDesc}
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-slate-50">
+                      <td className="p-3 sm:p-3.5 font-bold text-slate-900 border-r border-slate-200 bg-slate-50/50 whitespace-nowrap">
+                        {currentText.aiDoctorLayer}
+                      </td>
+                      <td className="p-3 sm:p-3.5 text-slate-600 leading-relaxed">
+                        {currentText.aiDoctorDesc}
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-slate-50">
+                      <td className="p-3 sm:p-3.5 font-bold text-slate-900 border-r border-slate-200 bg-slate-50/50 whitespace-nowrap">
+                        {currentText.priceLayer}
+                      </td>
+                      <td className="p-3 sm:p-3.5 text-slate-600 leading-relaxed">
+                        {currentText.priceDesc}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
 
@@ -255,22 +257,22 @@ export default function About() {
 
           {/* Section 3: How to Use */}
           <div className="space-y-4">
-            <h2 className="text-sm font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
+            <h2 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
               <span>📖</span> {currentText.sec3Title}
             </h2>
             <div className="space-y-3 text-xs">
-              <div className="bg-slate-50 border-2 border-slate-950 p-4 rounded-xl space-y-1">
-                <span className="font-black text-slate-900 block text-sm">{currentText.step1Title}</span>
+              <div className="bg-slate-50 border-2 border-slate-950 p-3 sm:p-4 rounded-xl space-y-1">
+                <span className="font-black text-slate-900 block text-xs sm:text-sm">{currentText.step1Title}</span>
                 <p className="text-slate-600">{currentText.step1Desc}</p>
               </div>
-              <div className="bg-slate-50 border-2 border-slate-950 p-4 rounded-xl space-y-1">
-                <span className="font-black text-slate-900 block text-sm">{currentText.step2Title}</span>
+              <div className="bg-slate-50 border-2 border-slate-950 p-3 sm:p-4 rounded-xl space-y-1">
+                <span className="font-black text-slate-900 block text-xs sm:text-sm">{currentText.step2Title}</span>
                 <p className="text-slate-600">
                   {currentText.step2DescText1}<strong>{currentText.step2DescLink1}</strong>{currentText.step2DescText2}<strong>{currentText.step2DescLink2}</strong>{currentText.step2DescText3}
                 </p>
               </div>
-              <div className="bg-slate-50 border-2 border-slate-950 p-4 rounded-xl space-y-1">
-                <span className="font-black text-slate-900 block text-sm">{currentText.step3Title}</span>
+              <div className="bg-slate-50 border-2 border-slate-950 p-3 sm:p-4 rounded-xl space-y-1">
+                <span className="font-black text-slate-900 block text-xs sm:text-sm">{currentText.step3Title}</span>
                 <p className="text-slate-600">{currentText.step3Desc}</p>
               </div>
             </div>
@@ -280,7 +282,7 @@ export default function About() {
 
           {/* Section 4: Advantages */}
           <div className="space-y-4">
-            <h2 className="text-sm font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
+            <h2 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
               <span>🌟</span> {currentText.sec4Title}
             </h2>
             <div className="space-y-2.5">
