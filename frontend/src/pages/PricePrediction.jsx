@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import { useLanguage } from "../LanguageContext";
 
-// 🌐 ADAPTIVE API BASE: Targets local Flask server directly on Port 5002 when developing locally
+// 🌐 ADAPTIVE API BASE: Targets local Flask server on Port 5002 locally, or your live Render backend in production
 const isLocal =
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1" ||
@@ -11,7 +11,7 @@ const isLocal =
 
 const PRICE_API_BASE = isLocal
   ? `http://${window.location.hostname}:5002`
-  : "https://smart-agri-ai-7tg9.onrender.com";
+  : "https://smart-agri-aiml-5a0i.onrender.com";
 
 export default function PricePrediction() {
   const { globalLang } = useLanguage();
@@ -29,7 +29,7 @@ export default function PricePrediction() {
 
   // 🔮 Climate Simulator Interactive State Sliders (Dynamic based on API data)
   const [rainfallOffset, setRainfallOffset] = useState(0); // Offset added to real recorded baseline (-50 to +100 mm)
-  const [demandSurge, setDemandSurge] = useState(0);       // percentage (-30% to +50%)
+  const [demandSurge, setDemandSurge] = useState(0);      // percentage (-30% to +50%)
 
   // 🌐 FULL PAGE TRANSLATION DICTIONARY
   const text = {
@@ -511,10 +511,10 @@ export default function PricePrediction() {
     
     setLoading(true);
     setPrediction(null);
-    setShowCalculator(true); // Automatically enables calculator view workspace on fresh calculation log
-    setQuintals("");          // Reset input volume field
-    setSmsStatus("");         // Clear old SMS status banners
-    setRainfallOffset(0);     // Reset offset on new crop selection
+    setShowCalculator(true); 
+    setQuintals("");          
+    setSmsStatus("");         
+    setRainfallOffset(0);     
     setDemandSurge(0);
     
     try {
@@ -538,7 +538,6 @@ export default function PricePrediction() {
     }
   };
 
-  // 📱 Dedicated Trigger function for the Controlled SMS backend route
   const handleSendSMS = async () => {
     setSmsLoading(true);
     setSmsStatus("Sending SMS alert...");
@@ -550,7 +549,7 @@ export default function PricePrediction() {
         body: JSON.stringify({
           crop: prediction.crop,
           predicted_price: prediction.predictions.smart_environmental_model_rs,
-          last_price: prediction.last_recorded_price // 👈 Sends current market baseline for trend calculation
+          last_price: prediction.last_recorded_price 
         })
       });
 
@@ -583,7 +582,6 @@ export default function PricePrediction() {
   const getFarmerAdvice = (current, forecast) => {
     const diff = forecast - current;
     const percentChange = (diff / current) * 100;
-    
     const cropName = currentText.crops[crop] || crop;
     
     if (percentChange > 3) {
@@ -624,7 +622,6 @@ export default function PricePrediction() {
     ? getFarmerAdvice(prediction.last_recorded_price, prediction.predictions.smart_environmental_model_rs)
     : null;
 
-  // 🧮 Climate Simulator Calculations using Real-World Base Rainfall from Backend API
   const baseAiPrice = prediction ? prediction.predictions.smart_environmental_model_rs : 0;
   const baseRainfall = prediction ? prediction.last_recorded_rainfall_mm : 0;
   const currentSimulatedRainfall = baseRainfall + rainfallOffset;
@@ -651,19 +648,15 @@ export default function PricePrediction() {
         }
       `}</style>
 
-      {/* Canva-style ambient gradient glow effects outside the main box */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[100px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[100px] pointer-events-none rounded-full" />
 
-      {/* Main Structural Layout Wrapper */}
       <div className="w-full max-w-5xl rounded-[32px] shadow-2xl shadow-indigo-950/30 border-[3px] border-slate-950 overflow-hidden transform transition-all duration-500 animate-fade-in-up relative z-10 bg-white">
         
-        {/* Dynamic Bold Color Strip utilizing grower-friendly green accent */}
         <div className="h-2.5 bg-gradient-to-r from-blue-700 via-indigo-900 to-[#2FD77C] border-b-[3px] border-slate-950" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x-[3px] divide-slate-950">
           
-          {/* LEFT SIDE PANEL */}
           <div className="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between bg-gradient-to-b from-white to-slate-100/70 backdrop-blur-sm">
             <div className="space-y-6">
               <div className="flex items-center space-x-4 mb-4">
@@ -678,7 +671,6 @@ export default function PricePrediction() {
                 </div>
               </div>
 
-              {/* 🌾 CLEAN DROPDOWN CROP SELECTION LIST */}
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <label className="text-xs font-black text-slate-400 uppercase tracking-widest block">{currentText.chooseCrop}</label>
@@ -709,7 +701,6 @@ export default function PricePrediction() {
                 </div>
               </div>
               
-              {/* THE ACTIVE HARVEST CALCULATOR FIELD WORKSPACE CONTAINER */}
               {prediction && showCalculator && (
                 <div className="bg-white border-2 border-slate-950 rounded-2xl p-5 shadow-2xl space-y-3 relative transition-all duration-500 animate-fade-in-up">
                   <div className="flex justify-between items-center">
@@ -763,7 +754,6 @@ export default function PricePrediction() {
             </div>
           </div>
 
-          {/* RIGHT SIDE PANEL */}
           <div className="lg:col-span-7 p-6 sm:p-10 bg-white min-h-[480px] flex flex-col justify-center transition-all duration-500">
             {!prediction ? (
               <div className="text-center py-16 space-y-4 animate-fade-in-up">
@@ -787,7 +777,6 @@ export default function PricePrediction() {
                   </span>
                 </div>
 
-                {/* GRAPH AREA */}
                 <div className="w-full h-48 min-w-[280px] bg-gradient-to-b from-slate-50 to-white p-2 rounded-2xl border-2 border-slate-950 shadow-inner transition-all duration-500 hover:shadow-lg">
                   <ResponsiveContainer width="100%" height="100%" minWidth={200} minHeight={160}>
                     <LineChart data={chartData} margin={{ top: 15, right: 15, left: -20, bottom: 5 }}>
@@ -800,7 +789,6 @@ export default function PricePrediction() {
                   </ResponsiveContainer>
                 </div>
 
-                {/* 🧮 CALCULATOR ANSWER BOX */}
                 {showCalculator && parsedQuintals > 0 && (
                   <div className="bg-gradient-to-tr from-blue-600 via-indigo-400 via-75% to-slate-950 text-slate-900 rounded-2xl p-5 shadow-xl border-2 border-slate-950 transition-all duration-500 transform hover:scale-[1.01] flex flex-col justify-between relative overflow-hidden group">
                     <div>
@@ -851,7 +839,6 @@ export default function PricePrediction() {
                   </div>
                 )}
 
-                {/* PRICE HIGHLIGHT BOXES */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="bg-white border-2 border-slate-950 rounded-2xl p-5 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
                     <div>
@@ -861,7 +848,6 @@ export default function PricePrediction() {
                     <span className="text-[10px] text-slate-400 font-bold block mt-4">{currentText.pastTrends}</span>
                   </div>
 
-                  {/* 🌟 WEATHER SMART AI GUESS BOX (Tied to Live Dynamic Climate Baseline) */}
                   <div className="bg-[#2FD77C] rounded-2xl p-5 border-2 border-slate-950 text-slate-900 shadow-[0_8px_20px_rgba(47,215,124,0.35)] transition-all duration-300 hover:scale-[1.01] flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between gap-2">
@@ -884,7 +870,6 @@ export default function PricePrediction() {
                   </div>
                 </div>
 
-                {/* 🔮 IDEA 24: "WHAT-IF" CLIMATE & MARKET SIMULATOR CARD (Dynamic Baseline Sync) */}
                 <div className="bg-slate-50 border-2 border-slate-950 p-5 rounded-2xl shadow-sm space-y-4">
                   <div className="border-b-2 border-slate-950 pb-2.5 flex items-center justify-between">
                     <div>
@@ -904,7 +889,6 @@ export default function PricePrediction() {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Slider 1: Rainfall Offset relative to live backend base */}
                     <div className="space-y-1.5">
                       <div className="flex justify-between items-center text-[11px]">
                         <span className="font-bold text-slate-700">{currentText.rainfallVolume}</span>
@@ -928,7 +912,6 @@ export default function PricePrediction() {
                       </div>
                     </div>
 
-                    {/* Slider 2: Market Demand Surge */}
                     <div className="space-y-1.5">
                       <div className="flex justify-between items-center text-[11px]">
                         <span className="font-bold text-slate-700">{currentText.demandSurgeLabel}</span>
@@ -954,7 +937,6 @@ export default function PricePrediction() {
                   </div>
                 </div>
 
-                {/* 📱 SMS BUTTON CHANNEL */}
                 <div className="border-2 border-slate-950 bg-slate-50 p-5 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 shadow-inner">
                   <div className="text-left space-y-0.5">
                     <span className="text-xs font-black text-slate-900 block tracking-widest uppercase">
@@ -988,7 +970,6 @@ export default function PricePrediction() {
                   </div>
                 </div>
 
-                {/* 📊 MULTI-MODEL COMPARISON ACCURACY DASHBOARD */}
                 <div className="border-[3px] border-slate-950 bg-white p-5 rounded-2xl space-y-4 shadow-md transition-all duration-300">
                   <div className="flex justify-between items-center border-b-2 border-slate-950 pb-2">
                     <span className="text-xs font-black text-slate-900 uppercase tracking-widest block">
@@ -1015,7 +996,6 @@ export default function PricePrediction() {
                         </tr>
                       </thead>
                       <tbody className="text-[11px] font-bold text-slate-800 divide-y divide-slate-950/10">
-                        {/* Active Optimal Model */}
                         <tr className="bg-indigo-50/40 text-slate-900 transition-all duration-300 transform hover:bg-slate-950 hover:text-white shadow-sm border border-transparent group">
                           <td className="p-2.5 font-black text-slate-950 group-hover:text-white rounded-l-xl">{currentText.randomForest}</td>
                           <td className="p-2.5 text-slate-400 font-medium group-hover:text-slate-300 hidden sm:table-cell">{currentText.rfFramework}</td>
@@ -1027,7 +1007,6 @@ export default function PricePrediction() {
                             <span className="bg-emerald-600 text-white text-[9px] px-1.5 py-0.5 rounded font-black uppercase shadow-sm border border-slate-950/20 group-hover:bg-[#2FD77C] group-hover:text-slate-950">{currentText.activeStatus}</span>
                           </td>
                         </tr>
-                        {/* Overfitted Model */}
                         <tr className="transition-all duration-300 transform hover:bg-slate-950 hover:text-white shadow-sm border border-transparent group">
                           <td className="p-2.5 font-extrabold rounded-l-xl">{currentText.decisionTree}</td>
                           <td className="p-2.5 text-slate-400 font-medium group-hover:text-slate-300 hidden sm:table-cell">{currentText.dtFramework}</td>
@@ -1039,7 +1018,6 @@ export default function PricePrediction() {
                             <span className="bg-amber-100 text-amber-800 text-[9px] px-1.5 py-0.5 rounded font-black uppercase group-hover:bg-amber-600 group-hover:text-white transition-colors">{currentText.overfitStatus}</span>
                           </td>
                         </tr>
-                        {/* Underfitted Model */}
                         <tr className="transition-all duration-300 transform hover:bg-slate-950 hover:text-white shadow-md border border-transparent group">
                           <td className="p-2.5 font-extrabold rounded-l-xl">{currentText.linearReg}</td>
                           <td className="p-2.5 text-slate-400 font-medium group-hover:text-slate-300 hidden sm:table-cell">{currentText.lrFramework}</td>
@@ -1056,7 +1034,6 @@ export default function PricePrediction() {
                   </div>
                 </div>
 
-                {/* CONFIDENCE STATS */}
                 <div className="grid grid-cols-2 gap-4 border-t-2 border-slate-950 pt-4 text-xs font-medium">
                   <div>
                     <span className="text-slate-400 font-black block uppercase tracking-wider text-[10px]">{currentText.aiTrustLevel}</span>
@@ -1068,7 +1045,6 @@ export default function PricePrediction() {
                   </div>
                 </div>
 
-                {/* FARMER ADVICE TEXT BOX */}
                 <div className={`p-5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md ${farmerAdvice.bg}`}>
                   <div className="flex items-center space-x-3 mb-2">
                     <span className={`text-[10px] font-black tracking-widest px-2.5 py-1.5 rounded-lg border border-slate-950/20 ${farmerAdvice.badge}`}>
@@ -1081,7 +1057,6 @@ export default function PricePrediction() {
                   </p>
                 </div>
 
-                {/* YEARLY BEST MONTH SELLING GUIDE */}
                 {prediction.calendar_intelligence && (
                   <div className="border-2 border-slate-950 bg-gradient-to-r from-slate-50 to-indigo-50/20 p-5 rounded-2xl space-y-4">
                     <span className="text-xs font-black text-slate-400 uppercase tracking-widest block">
@@ -1111,7 +1086,6 @@ export default function PricePrediction() {
                   </div>
                 )}
 
-                {/* FARMER DISCLAIMER & INFO BLOCK */}
                 <div className="border-2 border-slate-950 rounded-2xl p-4 bg-slate-50 text-xs text-slate-500 space-y-2">
                   <div className="font-black text-slate-800 flex items-center uppercase tracking-wider text-[10px]">
                     {currentText.importantNote}
