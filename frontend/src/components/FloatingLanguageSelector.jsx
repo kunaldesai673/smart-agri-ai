@@ -29,10 +29,10 @@ export default function FloatingLanguageSelector() {
   }, []);
 
   return (
-    <div ref={menuRef} className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50">
-      {/* Dropdown Menu */}
+    <div ref={menuRef} className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+      {/* Dropdown Menu - Mobile Optimized */}
       {isOpen && (
-        <div className="absolute bottom-16 right-0 bg-white/95 backdrop-blur-xl border-2 border-slate-950 rounded-2xl shadow-2xl p-2 w-44 sm:w-48 space-y-1 animate-fade-in-up">
+        <div className="absolute bottom-16 right-0 bg-white/95 backdrop-blur-xl border-2 border-slate-950 rounded-2xl shadow-2xl p-2 w-40 sm:w-48 max-w-[calc(100vw-2rem)] space-y-1 animate-fade-in-up">
           <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest px-3 py-1">
             Select Language
           </div>
