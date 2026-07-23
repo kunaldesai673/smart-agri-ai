@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../LanguageContext";
 
-// 🌐 ADAPTIVE API BASE: Targets local Flask server directly on Port 5002 when developing locally
+// 🌐 ADAPTIVE API BASE: Targets local Flask server on Port 5002 locally, or your live Render backend in production
 const isLocal =
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1" ||
@@ -10,7 +10,7 @@ const isLocal =
 
 const PRICE_API_BASE = isLocal
   ? `http://${window.location.hostname}:5002`
-  : "https://smart-agri-ai-7tg9.onrender.com";
+  : "https://smart-agri-aiml-5a0i.onrender.com";
 
 export default function CropHistoricalData() {
   const { globalLang } = useLanguage();
@@ -59,7 +59,7 @@ export default function CropHistoricalData() {
       },
       errors: {
         emptyDataset: "Historical dataset is empty or invalid format.",
-        connectionError: "Cannot connect to Python backend server (Port 5002). Please ensure price_app.py is running."
+        connectionError: "Cannot connect to backend server. Please check your internet connection."
       }
     },
     kn: {
@@ -96,7 +96,7 @@ export default function CropHistoricalData() {
       },
       errors: {
         emptyDataset: "ಐತಿಹಾಸಿಕ ಡೇಟಾಸೆಟ್ ಖಾಲಿಯಾಗಿದೆ ಅಥವಾ ಅಮಾನ್ಯ ಸ್ವರೂಪದಲ್ಲಿದೆ.",
-        connectionError: "ಪೈಥಾನ್ ಬ್ಯಾಕೆಂಡ್ ಸರ್ವರ್ (ಪೋರ್ಟ್ 5002) ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು price_app.py ಚಾಲೋದಲ್ಲಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ."
+        connectionError: "ಬ್ಯಾಕೆಂಡ್ ಸರ್ವರ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ."
       }
     },
     hi: {
@@ -112,7 +112,7 @@ export default function CropHistoricalData() {
       totalMonthsRecorded: "दर्ज कुल महीने",
       rows: "पंक्तियाँ",
       avgPrice: "औसत मूल्य",
-      highestPrice: "সর্বोচ্চ मूल्य",
+      highestPrice: "सर्वोच्च मूल्य",
       lowestPrice: "न्यूनतम मूल्य",
       tableMonthYear: "माह और वर्ष",
       tableWholesalePrice: "थोक मूल्य (₹)",
@@ -133,7 +133,7 @@ export default function CropHistoricalData() {
       },
       errors: {
         emptyDataset: "ऐतिहासिक डेटासेट खाली है या अमान्य प्रारूप में है।",
-        connectionError: "पायथन बैकएंड सर्वर (पोर्ट 5002) से कनेक्ट नहीं किया जा सकता। कृपया सुनिश्चित करें कि price_app.py चल रहा है।"
+        connectionError: "बैकएंड सर्वर से कनेक्ट नहीं किया जा सकता। कृपया इंटरनेट कनेक्शन जांचें।"
       }
     },
     mr: {
@@ -170,7 +170,7 @@ export default function CropHistoricalData() {
       },
       errors: {
         emptyDataset: "ऐतिहासिक डेटासेट रिकामा आहे किंवा अवैध स्वरूपात आहे.",
-        connectionError: "पायथन बॅकएंड सर्व्हरशी (पोर्ट 5002) कनेक्ट करू शकत नाही. कृपया price_app.py सुरू असल्याची खात्री करा."
+        connectionError: "बॅकएंड सर्व्हरशी कनेक्ट करू शकत नाही. कृपया इंटरनेट कनेक्शन तपासा."
       }
     }
   };
@@ -262,7 +262,6 @@ export default function CropHistoricalData() {
         }
       `}</style>
 
-      {/* Canva-style ambient gradient glow effects outside the main box */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-purple-200/40 to-blue-200/20 blur-[100px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-100/40 to-pink-100/20 blur-[100px] pointer-events-none rounded-full" />
 
