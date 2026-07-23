@@ -82,7 +82,7 @@ def resolve_csv_path():
 
 @app.route("/")
 def home():
-    return f"📈 Automated 6-Crop Price Analytics Engine Online (Port 5002) - Active Models: {len(loaded_models)}/6"
+    return f"📈 Automated 6-Crop Price Analytics Engine Online - Active Models: {len(loaded_models)}/6"
 
 
 # 🟢 1. PREDICT PRICE ENDPOINT
@@ -226,7 +226,7 @@ def get_historical_data():
         df['Month_Year'] = df['Month_Year'].astype(str).str.replace('"', '').str.replace("'", '').str.strip()
         df['Crop'] = df['Crop'].astype(str).str.strip().str.title()
         
-        # Parse Dates for reverse chronological sorting (July 2026 -> Jan 2020)
+        # Parse Dates for reverse chronological sorting
         df['Parsed_Date'] = pd.to_datetime(df['Month_Year'], format='%B, %Y', errors='coerce')
         if df['Parsed_Date'].isna().any():
             df['Parsed_Date'] = pd.to_datetime(df['Month_Year'], errors='coerce')
@@ -261,7 +261,7 @@ def get_historical_data():
         return jsonify({"success": False, "error": f"Failed to retrieve data: {str(e)}"}), 500
 
 
-# 🚀 SERVER START (Kept strictly at the bottom)
+# 🚀 SERVER START (Dynamic Render Port Binding)
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5002))
+    port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=False)
