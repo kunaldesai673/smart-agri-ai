@@ -21,7 +21,7 @@ export default function Navbar() {
                 Smart Agri AI
               </span>
               <span className="text-[9px] font-bold text-emerald-400 block tracking-widest uppercase -mt-0.5">
-                Belagavi Core
+                Belagaum Core
               </span>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function Navbar() {
               { path: "/", label: "Home", icon: "🏠" },
               { path: "/price-prediction", label: "Price Flow", icon: "📈" },
               { path: "/disease-detection", label: "Leaf Doctor", icon: "🍃" },
-              { path: "/Crop-guide", label: "Crop Guide", icon: "📖" },
+              { path: "/historical-data", label: "Historic Data", icon: "📜" },
               { path: "/about", label: "About", icon: "ℹ️" }
             ].map((item) => (
               <Link

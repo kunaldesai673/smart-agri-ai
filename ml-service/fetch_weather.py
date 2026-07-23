@@ -1,50 +1,54 @@
 import pandas as pd
-from datetime import datetime
-import meteostat as ms
+import requests
 import os
+from datetime import datetime
 
-# 1. Define the Time Period
-start = datetime(2022, 1, 1)
-end = datetime.now()
+print("🌐 Connecting to Open-Meteo Historical Archive for Belgaum Rainfall (2020 - Present)...")
 
-print("🌐 Connecting to Meteostat Station: 43197 (Belgaum)...")
+# Belgaum Coordinates
+LAT, LON = 15.8497, 74.4977
+START_DATE = "2020-01-01"
+END_DATE = datetime.now().strftime("%Y-%m-%d")
+
+# Open-Meteo Free Archive API Endpoint for Daily Rain Sums
+url = (
+    f"https://archive-api.open-meteo.com/v1/archive?"
+    f"latitude={LAT}&longitude={LON}"
+    f"&start_date={START_DATE}&end_date={END_DATE}"
+    f"&daily=rain_sum&timezone=Asia/Kolkata"
+)
 
 try:
-    # 2. Directly target the Belgaum Station by its ID
-    # This is more reliable than using Latitude/Longitude
-    data = ms.monthly('43197', start, end)
-    df = data.fetch()
+    response = requests.get(url)
+    data = response.json()
 
-    # 3. Handle the case where 'df' might be None
-    if df is None:
-        print("⚠️ Direct station data unavailable. Searching for any nearby data...")
-        # Fallback: Search for any station within 50km
-        stations = ms.stations().nearby(15.85, 74.50)
-        station = stations.fetch(1)
-        data = ms.monthly(station, start, end)
-        df = data.fetch()
-
-    if df is not None and not df.empty:
-        # 4. Clean and Format
-        weather_df = df.reset_index()
-        # Newer versions of Meteostat use 'time' as the index name
-        weather_df = weather_df[['time', 'prcp']]
-        weather_df.columns = ['Date', 'Rainfall_mm']
+    if "daily" in data:
+        # Build daily dataframe from API response
+        daily_df = pd.DataFrame({
+            "Date": pd.to_datetime(data["daily"]["time"]),
+            "Rain_mm": data["daily"]["rain_sum"]
+        })
         
-        # Format date to match your price CSV (e.g., "February 2023")
-        weather_df['Month_Year'] = weather_df['Date'].dt.strftime('%B %Y')
+        # Convert daily precipitation into Monthly sums (e.g., "January 2020")
+        daily_df["Month_Year"] = daily_df["Date"].dt.strftime("%B %Y")
+        monthly_df = daily_df.groupby("Month_Year", sort=False)["Rain_mm"].sum().reset_index()
+        
+        monthly_df.columns = ["Month_Year", "Rainfall_mm"]
+        monthly_df["Rainfall_mm"] = monthly_df["Rainfall_mm"].round(1)
 
-        # 5. Save using Absolute Path
+        # Sort chronologically or keep standard format
+        # Save using your absolute path
         OUTPUT_PATH = r'C:\Users\kunal desai\smart-agri-ai\data\processed\belgaum_rainfall.csv'
         os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
         
-        weather_df[['Month_Year', 'Rainfall_mm']].to_csv(OUTPUT_PATH, index=False)
+        monthly_df.to_csv(OUTPUT_PATH, index=False)
         
         print(f"✅ Success! Weather data saved to: {OUTPUT_PATH}")
+        print(f"📊 Total Months Fetched: {len(monthly_df)}")
         print("\n--- Preview of Weather Data ---")
-        print(weather_df[['Month_Year', 'Rainfall_mm']].head())
+        print(monthly_df.head(10))
     else:
-        print("❌ No data could be retrieved. The Meteostat server might be down.")
+        print("❌ Error: API response did not include daily data fields.", data)
 
 except Exception as e:
-    print(f"❌ Error during fetch: {e}")
+    print(f"❌ Connection error: {e}")
