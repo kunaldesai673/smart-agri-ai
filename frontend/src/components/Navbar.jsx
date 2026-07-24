@@ -3,7 +3,7 @@ import { useLanguage } from "../LanguageContext";
 
 export default function Navbar() {
   const location = useLocation();
-  const { globalLang, setGlobalLang } = useLanguage();
+  const { globalLang } = useLanguage();
 
   // Helper to highlight the active menu item perfectly
   const isActive = (path) => location.pathname === path;
@@ -38,7 +38,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Center/Right Navigation Controls Links */}
+          {/* Navigation Links (Without Inline Language Selector) */}
           <div className="flex items-center space-x-1 sm:space-x-2">
             {[
               { path: "/", label: t.home, icon: "🏠" },
@@ -60,21 +60,6 @@ export default function Navbar() {
                 <span className="hidden lg:inline">{item.label}</span>
               </Link>
             ))}
-
-            {/* Language Selector Dropdown */}
-            <div className="relative pl-1">
-              <select
-                value={globalLang}
-                onChange={(e) => setGlobalLang(e.target.value)}
-                className="bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold rounded-xl px-2 py-1.5 focus:outline-none focus:border-emerald-500 cursor-pointer shadow-inner"
-                aria-label="Select Language"
-              >
-                <option value="en">EN</option>
-                <option value="kn">ಕನ್ನಡ</option>
-                <option value="hi">हिंदी</option>
-                <option value="mr">मराठी</option>
-              </select>
-            </div>
           </div>
 
         </div>
